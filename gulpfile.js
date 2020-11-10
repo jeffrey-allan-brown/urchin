@@ -34,8 +34,19 @@ gulp.task('initialSetup', series('cleanVendors','cloneVendorSCSS','cloneVendorJS
 
 //
 
+// Build Core & Theme Files //
 
-// Build Core Files //
+gulp.task('buildThemeCSS', () => {
+    return gulp.src([
+        './src/assets/scss/main.scss'
+    ])
+    .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(sourcemaps.write('./maps'))
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(concat('main.css'))
+    .pipe(gulp.dest('./src/assets/css'));
+});
 
 gulp.task('buildCoreCSS', () => {
     return gulp.src([
@@ -46,7 +57,7 @@ gulp.task('buildCoreCSS', () => {
     .pipe(sourcemaps.write('./maps'))
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(concat('core.css'))
-    .pipe(gulp.dest('./src/assets/vendors/core'));
+    .pipe(gulp.dest('./src/assets/css'));
 });
 
 gulp.task('buildCoreJS', () => {
@@ -55,12 +66,11 @@ gulp.task('buildCoreJS', () => {
         './src/assets/vendors/jquery/jquery.js'
     ])
     .pipe(concat('core.js'))
-    .pipe(gulp.dest('./src/assets/vendors/core'));
+    .pipe(gulp.dest('./src/assets/js'));
 });
 
-gulp.task('buildCoreFiles', series('buildCoreCSS','buildCoreJS'));
+gulp.task('buildCoreFiles', series('buildThemeCSS','buildCoreCSS','buildCoreJS'));
 
 //
-
 
 gulp.task('mainBuild', series('initialSetup','buildCoreFiles'));
