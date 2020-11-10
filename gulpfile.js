@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var sourcemaps = require('gulp-sourcemaps');
-var sass = require('gulp-sass');
+var sass = require('gulp-dart-sass');
 var del = require('del');
 var concat = require('gulp-concat');
 var merge = require('merge-stream');
@@ -26,7 +26,8 @@ gulp.task('cloneVendorSCSS', () => {
 
 gulp.task('cloneVendorJS', () => {
     var script1 = gulp.src('./node_modules/bootstrap/js/src/*.js').pipe(gulp.dest('./src/assets/vendors/bootstrap/js'));
-    return merge(script1);
+    var script2 = gulp.src('./node_modules/jquery/dist/jquery.js').pipe(gulp.dest('./src/assets/vendors/jquery'));
+    return merge(script1,script2);
 });
 
 gulp.task('initialSetup', series('cleanVendors','cloneVendorSCSS','cloneVendorJS'));
@@ -50,7 +51,8 @@ gulp.task('buildCoreCSS', () => {
 
 gulp.task('buildCoreJS', () => {
     return gulp.src([
-        './src/assets/vendors/bootstrap/js/*.js'
+        './src/assets/vendors/bootstrap/js/*.js',
+        './src/assets/vendors/jquery/jquery.js'
     ])
     .pipe(concat('core.js'))
     .pipe(gulp.dest('./src/assets/vendors/core'));
