@@ -1,0 +1,29 @@
+{
+  "name": "urchin",
+  "author": "Hieronymous-Bean",
+  "version": "v0.0.0-alpha",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hieronymous-bean/urchin.git"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.3"
+  },
+  "devDependencies": {
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "merge-stream": "^2.0.0"
+  },
+  "scripts": {
+    "ng": "ng",
+    "setup": "npm install && npm run build",
+    "build": "gulp mainBuild"
+  }
+}
