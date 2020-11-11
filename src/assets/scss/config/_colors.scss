@@ -1,4 +1,4 @@
-// Color Config //
+// Color Configuration Options //
 // Update color codes to customize default values for various hues //
 $white:    #ffffff !default;
 $gray-100: #f8f9fa !default;
@@ -28,7 +28,6 @@ $grays: map-merge(
   $grays
 );
 
-
 $blue:    #007bff !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
@@ -39,8 +38,6 @@ $yellow:  #ffc107 !default;
 $green:   #28a745 !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
-
-
 
 $colors: () !default;
 $colors: map-merge(
@@ -84,4 +81,32 @@ $theme-colors: map-merge(
     "dark":       $dark
   ),
   $theme-colors
+);
+
+$theme-gradient-colors: (
+  primary:         linear-gradient(230deg, #759bff, #843cf6),
+  secondary:       linear-gradient(to right, #e7ebf0, #868e96),
+  success:         linear-gradient(45deg, #7bffce, #30c93e),
+  info:            linear-gradient(to bottom, #0e4cfd, #6a8eff),
+  warning:         linear-gradient(135deg, #ffc480, #ff763b),
+  danger:          linear-gradient(316deg, #fc5286, #fbaaa2),
+  light:           linear-gradient(to right, #cfd9df 0%, #e2ebf0 100%),
+  dark:            linear-gradient(to right, #7d7979 0%, #000000 100%)
+);
+
+$content-bg: #f9fafb;
+$border-color: #e8ebf1;
+
+$social-colors: (
+  twitter: #2caae1,
+  facebook: #3b579d,
+  google: #dc4a38,
+  linkedin: #0177b5,
+  pinterest: #cc2127,
+  youtube: #e52d27,
+  github: #333333,
+  behance: #1769ff,
+  dribbble: #ea4c89,
+  reddit: #ff4500,
+  instagram: #fb3958
 );
