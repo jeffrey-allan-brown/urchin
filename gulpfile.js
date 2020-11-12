@@ -73,8 +73,8 @@ gulp.task('cloneVendorJS', () => {
     var script1 = gulp.src('./node_modules/bootstrap/js/src/*.js').pipe(gulp.dest('./src/assets/vendors/bootstrap/js'));
     var script2 = gulp.src('./node_modules/bootstrap/dist/js/*.js').pipe(gulp.dest('./src/assets/vendors/bootstrap/js'));
     var script3 = gulp.src('./node_modules/jquery/dist/jquery.min.js').pipe(gulp.dest('./src/assets/vendors/jquery'));
-    var style5 = gulp.src('./node_modules/feather-icons/dist/feather.min.js').pipe(gulp.dest('./src/assets/fonts'));
-    return merge(script1,script2,script3);
+    var script4 = gulp.src('./node_modules/feather-icons/**').pipe(gulp.dest('./src/assets/fonts/feather-icons'));
+    return merge(script1,script2,script3,script4);
 });
 
 gulp.task('initialSetup', series('cleanBuild','cloneVendorSCSS','cloneVendorJS'));
@@ -96,7 +96,7 @@ gulp.task('buildCoreCSS', () => {
     .pipe(gulp.dest('./dist/assets/css'));
 });
 gulp.task('buildCoreJS', () => {
-    return gulp.src(['./src/assets/vendors/jquery/jquery.min.js','./src/assets/vendors/bootstrap/js/bootstrap.min.js','./src/assets/fonts/feather.min.js'])
+    return gulp.src(['./src/assets/vendors/jquery/jquery.min.js','./src/assets/vendors/bootstrap/js/bootstrap.min.js'])
     .pipe(concat('core.min.js'))
     .pipe(gulp.dest('./dist/assets/js'));
 });
@@ -109,8 +109,12 @@ gulp.task('buildThemeCSS', () => {
     .pipe(concat('main.css'))
     .pipe(gulp.dest('./dist/assets/css'));
 });
+gulp.task('buildThemeFonts', () => {
+    return gulp.src(['./src/assets/fonts/feather-icons/**'])
+    .pipe(gulp.dest('./dist/assets/fonts/feather-icons'));
+});
 
-gulp.task('buildCoreFiles', series('buildCoreCSS','buildCoreJS','buildThemeCSS'));
+gulp.task('buildCoreFiles', series('buildCoreCSS','buildCoreJS','buildThemeCSS','buildThemeFonts'));
 
 
 // Compile Views //

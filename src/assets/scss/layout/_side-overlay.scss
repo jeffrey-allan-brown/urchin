@@ -1,0 +1,32 @@
+#side-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1034;
+    width: 320px;
+    height: 100%;
+    background-color: #fff;
+    overflow-y: auto;
+    -webkit-transform: translateX(100%) translateY(0) translateZ(0);
+    transform: translateX(100%) translateY(0) translateZ(0);
+    opacity: 0;
+    -webkit-overflow-scrolling: touch;
+    will-change: transform;
+}
+
+.side-overlay-o #side-overlay {
+    -webkit-transform: translateX(0) translateY(0) translateZ(0);
+    transform: translateX(0) translateY(0) translateZ(0);
+    opacity: 1;
+}
+
+#page-container.side-scroll #side-overlay, #page-container.side-scroll #sidebar .js-sidebar-scroll {
+    overflow-y: visible;
+}
+
+.side-trans-enabled #side-overlay {
+    transition: opacity .28s ease-out,-webkit-transform .28s ease-out;
+    transition: transform .28s ease-out,opacity .28s ease-out;
+    transition: transform .28s ease-out,opacity .28s ease-out,-webkit-transform .28s ease-out;
+}

@@ -20,9 +20,11 @@
 
 //----------------------
 // Main Layout Styles //
+@import "./layout/container";
 @import "./layout/header-navbar";
 @import "./layout/main-navbar";
 @import "./layout/main-sidebar";
+@import "./layout/side-overlay";
 @import "./layout/footer";
 
 /*=========================================================================================
