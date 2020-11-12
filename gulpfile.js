@@ -1,39 +1,21 @@
-// // // // // // // // // / //
 // Import Required Packages //
-// // // // // // // // // //
+// ------------------------------
 const gulp = require('gulp');
 const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-dart-sass');
 const pug = require('gulp-pug');
 const del = require('del');
 const concat = require('gulp-concat');
+var header = require('gulp-header');
 const merge = require('merge-stream');
 const cleanCSS = require('gulp-clean-css');
 const { series } = require('gulp');
-
-// Configuration //
-// ------------------------------
-
-/* Personal Details */
-const personalSettings = {
-    firstName: "",
-    lastName: "",
-    emailAddress: "",
-    phoneNumber: "",
-    companyName: ""
-}
-
-/* Application Settings */
-const applicationSettings = {
-    appTheme: "default",
-    direction: "ltr",
-    layoutStyle: "horizontalNavigation",
-}
+const vinyl = require('vinyl');
+const config = require("./config.json")
 
 
 
-
-// Define Constants //
+// Constants //
 // ------------------------------
 
 /* Directories */
@@ -63,7 +45,7 @@ const paths = {
     }
 }
 
-/*  */
+/* Stamp Branding */
 const app = require('./package.json');
 const banner = [
     '/*!',
@@ -76,10 +58,8 @@ const banner = [
 
 
 
-
-// // // // // // // // // // / //
 // Intial Setup & Vendor Tasks //
-// // // // // // // // // // // 
+// ------------------------------
 
 gulp.task('cleanBuild', () => {
     return del([paths.app.css, paths.app.js, paths.app.vendors, paths.dist.assets]);
@@ -101,9 +81,10 @@ gulp.task('cloneVendorJS', () => {
 gulp.task('initialSetup', series('cleanBuild','cloneVendorSCSS','cloneVendorJS'));
 
 
-// // // // // //
+
+
 // Build Files //
-// // // // // //
+// ------------------------------
 
 gulp.task('buildCoreCSS', () => {
     return gulp.src(['./src/assets/vendors/bootstrap/scss/bootstrap.scss'])
@@ -112,6 +93,7 @@ gulp.task('buildCoreCSS', () => {
     .pipe(sourcemaps.write('./maps'))
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(concat('core.min.css'))
+    .pipe(header(banner, { app: app }))
     .pipe(gulp.dest('./dist/assets/css'));
 });
 gulp.task('buildCoreJS', () => {
@@ -131,9 +113,9 @@ gulp.task('buildThemeCSS', () => {
 
 gulp.task('buildCoreFiles', series('buildCoreCSS','buildCoreJS','buildThemeCSS'));
 
-// // // // // // /
+
 // Compile Views //
-// // // // // // /
+// ------------------------------
 
 gulp.task('compileViews', function buildHTML() {
     return gulp.src('./src/views/index.pug')
@@ -147,8 +129,8 @@ gulp.task('compileViews', function buildHTML() {
 
 
 
-// // // // // //
-// Full Build //
-// // // // // /
 
-gulp.task('mainBuild', series('initialSetup','buildCoreFiles'));
+// Full Build //
+// ------------------------------
+
+gulp.task('mainBuild', series('initialSetup','buildCoreFiles','compileViews'));

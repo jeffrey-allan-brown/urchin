@@ -1,0 +1,20 @@
+{
+  "personal": {
+    "firstName": "",
+    "lastName": "",
+    "emailAddress": "",
+    "phoneNumber": "",
+    "companyName": ""
+  },
+  "app": {
+    "appTheme": "default",
+    "direction": "ltr",
+    "layoutStyle": "horizontalNavigation",
+    "glossary": {
+      "html":"html",
+      "boilerplate":"boilerplate",
+      "documentation": "documentation",
+      "assets": "assets"
+    }
+  }
+}
