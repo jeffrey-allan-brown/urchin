@@ -11,20 +11,41 @@ const merge = require('merge-stream');
 const cleanCSS = require('gulp-clean-css');
 const { series } = require('gulp');
 
+// Configuration //
+// ------------------------------
 
-// // // // // // // //
+/* Personal Details */
+const personalSettings = {
+    firstName: "",
+    lastName: "",
+    emailAddress: "",
+    phoneNumber: "",
+    companyName: ""
+}
+
+/* Application Settings */
+const applicationSettings = {
+    appTheme: "default",
+    direction: "ltr",
+    layoutStyle: "horizontalNavigation",
+}
+
+
+
+
 // Define Constants //
-// /// // // // // //
+// ------------------------------
 
 /* Directories */
 const dirs = {
     app: 'src/',
-    assets: 'assets/'
+    assets: 'assets/',
+    dist: 'dist/'
 };
 
 /* Paths */
 const paths = {
-
+    app: {
         assets: dirs.app + dirs.assets,
         scss: dirs.app + dirs.assets + 'scss/',
         css: dirs.app + dirs.assets + 'css/',
@@ -32,15 +53,36 @@ const paths = {
         vendors: dirs.app + dirs.assets + 'vendors/',
         fonts: dirs.app + dirs.assets + 'fonts/',
         images: dirs.app + dirs.assets + 'images/'
-    
+    },
+    dist: {
+        assets: dirs.dist + dirs.assets,
+        css: dirs.dist + dirs.assets + 'css/',
+        js: dirs.dist + dirs.assets + 'js/',
+        fonts: dirs.dist + dirs.assets + 'fonts/',
+        images: dirs.dist + dirs.assets + 'images/'
+    }
 }
+
+/*  */
+const app = require('./package.json');
+const banner = [
+    '/*!',
+    ` * ${app.name} - v${app.version}`,
+    ` * @author ${app.author} - ${app.repository.url} `,
+    ` * Copyright (c) ${new Date().getFullYear()}`,
+    ' */',
+    ''].join('\n');
+
+
+
+
 
 // // // // // // // // // // / //
 // Intial Setup & Vendor Tasks //
 // // // // // // // // // // // 
 
 gulp.task('cleanBuild', () => {
-    return del([paths.css, paths.js, paths.vendors]);
+    return del([paths.app.css, paths.app.js, paths.app.vendors, paths.dist.assets]);
 });
 gulp.task('cloneVendorSCSS', () => {
     var style1 = gulp.src('./node_modules/bootstrap/scss/*.scss').pipe(gulp.dest('./src/assets/vendors/bootstrap/scss'));
@@ -70,12 +112,12 @@ gulp.task('buildCoreCSS', () => {
     .pipe(sourcemaps.write('./maps'))
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(concat('core.min.css'))
-    .pipe(gulp.dest('./src/assets/css'));
+    .pipe(gulp.dest('./dist/assets/css'));
 });
 gulp.task('buildCoreJS', () => {
     return gulp.src(['./src/assets/vendors/jquery/jquery.min.js','./src/assets/vendors/bootstrap/js/bootstrap.min.js'])
     .pipe(concat('core.min.js'))
-    .pipe(gulp.dest('./src/assets/js'));
+    .pipe(gulp.dest('./dist/assets/js'));
 });
 gulp.task('buildThemeCSS', () => {
     return gulp.src(['./src/assets/scss/main.scss'])
@@ -84,7 +126,7 @@ gulp.task('buildThemeCSS', () => {
     .pipe(sourcemaps.write('./maps'))
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(concat('main.css'))
-    .pipe(gulp.dest('./src/assets/css'));
+    .pipe(gulp.dest('./dist/assets/css'));
 });
 
 gulp.task('buildCoreFiles', series('buildCoreCSS','buildCoreJS','buildThemeCSS'));
@@ -100,6 +142,8 @@ gulp.task('compileViews', function buildHTML() {
     }))
     .pipe(gulp.dest('./dist'));
   });
+
+
 
 
 

@@ -32,18 +32,20 @@ Urchin uses a core set of packages for its functionality:
 Engine                              | Node.js
 Primary Functions                   | Javascript
 Build and Deployment Automation     | Gulp
+View Engine                         | Pug
 Front-End                           | Bootstrap
 Styling                             | SASS
 
 ## :inbox_tray: Installation
 
-To get started, run:
+To get started, first go to the `gulpfile.js` file and edit the configuration objects, adding your personal information and application build preferences.
+Then, run the setup script from the root directory.
 
 ```
 npm run setup
 ```
 
-This will install all required modules, run Gulp task automation, and compile application components. 
+This will install all required modules, run Gulp task automation, and compile application components. It also compiles all Pug templates into their HTML equivalents, with all variables prep-populated with the data entered in `settings`. 
 
 ```bash
 ├──.github
