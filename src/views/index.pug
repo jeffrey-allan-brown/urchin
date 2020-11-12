@@ -1,7 +1,9 @@
 doctype html
 html(lang="en")
   include ../partials/_head.pug
-  body(class="fixed-footer")
+  body(class="fixed-footer horizontal-menu")
+
+    aside(id="side-overlay")
 
     nav(class="header-navbar navbar-fixed navbar-shadow")
         div(class="navbar-wrapper")
@@ -25,6 +27,25 @@ html(lang="en")
                             li(class="nav-item d-none d-lg-block")
                                 a(class="nav-link" href="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Calendar")
                                     i(class="ficon feather icon-calendar")
+                    ul(class="nav navbar-nav float-right")
+                        li(class="dropdown dropdown-language nav-item")
+                            a(class="dropdown-toggle nav-link" id="dropdown-flag" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                                i(class="flag-icon flag-icon-us")
+                                span(class="selected-language") English
+                            div(class="dropdown-menu" aria-labelledby="dropdown-flag")
+                                a(class="dropdown-item" href="#" data-language="en")
+                                    i(class="flag-icon flag-icon-us")
+                                    |English
+                        li(class="nav-item d-none d-lg-block")
+                            a(class="nav-link nav-link-expand")
+                                i(class="ficon feather icon-maximize")
+                        li(class="dropdown dropdown-notification nav-item")
+                            a(class="nav-link nav-link-label" href="#" data-toggle="dropdown")
+                                i(class="ficon feather icon-bell")
+                        li(class="dropdown dropdown-user nav-item")
+                            a(class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown")
+                                i(class="feather icon-file font-medium-5 warning")
+
 
     nav(class="main-navbar")
 
@@ -47,8 +68,3 @@ html(lang="en")
                 a(class="text-bold-800 grey darken-2" href="" target="_blank") BLUEJAYDIGITAL, 
                 | all rights reserved
             span(class="float-md-right d-none d-md-block") Text
-            
-
-
-
-                       

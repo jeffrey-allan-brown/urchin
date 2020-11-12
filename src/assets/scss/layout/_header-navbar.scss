@@ -13,3 +13,20 @@
 .header-navbar.navbar-shadow {
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05);
 }   
+
+.header-navbar .navbar-wrapper {
+    width: 100%;
+}
+
+
+// Specific to Horizontal Menu Configs //
+.horizontal-menu .header-navbar .navbar-container {
+    padding-left: 2.2rem;
+    padding-right: calc(2.2rem - 1rem);
+    border-radius: 0.5rem;
+}
+
+.horizontal-menu .content {
+    margin-left: 0;
+}
+//

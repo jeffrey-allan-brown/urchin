@@ -1,7 +1,7 @@
 {
   "name": "urchin",
   "author": "Jeffrey Brown",
-  "version": "0.0.0-alpha",
+  "version": "v0.0.0-alpha",
   "private": true,
   "repository": {
     "type": "git",

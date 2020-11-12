@@ -49,7 +49,7 @@ const paths = {
 const app = require('./package.json');
 const banner = [
     '/*!',
-    ` * ${app.name} - v${app.version}`,
+    ` * ${app.name} - ${app.version}`,
     ` * @author ${app.author} - ${app.repository.url} `,
     ` * Copyright (c) ${new Date().getFullYear()}`,
     ' */',
@@ -75,6 +75,7 @@ gulp.task('cloneVendorJS', () => {
     var script1 = gulp.src('./node_modules/bootstrap/js/src/*.js').pipe(gulp.dest('./src/assets/vendors/bootstrap/js'));
     var script2 = gulp.src('./node_modules/bootstrap/dist/js/*.js').pipe(gulp.dest('./src/assets/vendors/bootstrap/js'));
     var script3 = gulp.src('./node_modules/jquery/dist/jquery.min.js').pipe(gulp.dest('./src/assets/vendors/jquery'));
+    var style5 = gulp.src('./node_modules/feather-icons/dist/feather.min.js').pipe(gulp.dest('./src/assets/fonts'));
     return merge(script1,script2,script3);
 });
 
@@ -97,7 +98,7 @@ gulp.task('buildCoreCSS', () => {
     .pipe(gulp.dest('./dist/assets/css'));
 });
 gulp.task('buildCoreJS', () => {
-    return gulp.src(['./src/assets/vendors/jquery/jquery.min.js','./src/assets/vendors/bootstrap/js/bootstrap.min.js'])
+    return gulp.src(['./src/assets/vendors/jquery/jquery.min.js','./src/assets/vendors/bootstrap/js/bootstrap.min.js','./src/assets/fonts/feather.min.js'])
     .pipe(concat('core.min.js'))
     .pipe(gulp.dest('./dist/assets/js'));
 });
