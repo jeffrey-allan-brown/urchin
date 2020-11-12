@@ -56,8 +56,6 @@ const banner = [
     ''].join('\n');
 
 
-
-
 // Intial Setup & Vendor Tasks //
 // ------------------------------
 

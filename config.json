@@ -1,10 +1,10 @@
 {
   "personal": {
-    "firstName": "",
-    "lastName": "",
-    "emailAddress": "",
-    "phoneNumber": "",
-    "companyName": ""
+    "firstName": "First",
+    "lastName": "Last",
+    "emailAddress": "email@address.com",
+    "phoneNumber": "Phone Number",
+    "companyName": "Company Name"
   },
   "app": {
     "appTheme": "default",
@@ -16,5 +16,9 @@
       "documentation": "documentation",
       "assets": "assets"
     }
+  },
+  "modules": {
+    "header-nav": "true",
+    "main-nav": "true"
   }
 }
