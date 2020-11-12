@@ -1,7 +1,15 @@
-.primary-nav {
-    z-index: 1031;
-    position: absolute;
-    display: table-cell;
-    height: 100%;
-    overflow: hidden;
+.header-navbar.navbar-fixed {
+    position: fixed;
+    width: 100%;
+    background-color: #F8F8F8;
+    z-index: 999 !important;
+    line-height: 1;
+    min-height: auto;
+    padding: 0;
+    transition: 300ms ease all;
+    font-family: serif;
 }
+
+.header-navbar.navbar-shadow {
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05);
+}   

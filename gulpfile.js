@@ -4,6 +4,7 @@
 const gulp = require('gulp');
 const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-dart-sass');
+const pug = require('gulp-pug');
 const del = require('del');
 const concat = require('gulp-concat');
 const merge = require('merge-stream');
@@ -87,6 +88,18 @@ gulp.task('buildThemeCSS', () => {
 });
 
 gulp.task('buildCoreFiles', series('buildCoreCSS','buildCoreJS','buildThemeCSS'));
+
+// // // // // // /
+// Compile Views //
+// // // // // // /
+
+gulp.task('compileViews', function buildHTML() {
+    return gulp.src('./src/views/index.pug')
+    .pipe(pug({
+      pretty: true
+    }))
+    .pipe(gulp.dest('./dist'));
+  });
 
 
 
