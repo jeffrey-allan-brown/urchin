@@ -60,14 +60,11 @@ const banner = [
 // ------------------------------
 
 gulp.task('cleanBuild', () => {
-    return del([paths.app.css, paths.app.js, paths.app.vendors, paths.dist.assets]);
+    return del([paths.app.css, paths.app.vendors, paths.dist.assets]);
 });
 gulp.task('cloneVendorSCSS', () => {
-    var style1 = gulp.src('./node_modules/bootstrap/scss/*.scss').pipe(gulp.dest('./src/assets/vendors/bootstrap/scss'));
-    var style2 = gulp.src('./node_modules/bootstrap/scss/mixins/*.scss').pipe(gulp.dest('./src/assets/vendors/bootstrap/scss/mixins'));
-    var style3 = gulp.src('./node_modules/bootstrap/scss/utilities/*.scss').pipe(gulp.dest('./src/assets/vendors/bootstrap/scss/utilities'));
-    var style4 = gulp.src('./node_modules/bootstrap/scss/vendor/*.scss').pipe(gulp.dest('./src/assets/vendors/bootstrap/scss/vendor'));
-    return merge(style1,style2,style3,style4);
+    var style1 = gulp.src('./node_modules/bootstrap/scss/**').pipe(gulp.dest('./src/assets/vendors/bootstrap/scss'));
+    return merge(style1);
 });
 gulp.task('cloneVendorJS', () => {
     var script1 = gulp.src('./node_modules/bootstrap/js/src/*.js').pipe(gulp.dest('./src/assets/vendors/bootstrap/js'));
@@ -78,7 +75,6 @@ gulp.task('cloneVendorJS', () => {
 });
 
 gulp.task('initialSetup', series('cleanBuild','cloneVendorSCSS','cloneVendorJS'));
-
 
 
 
@@ -96,7 +92,7 @@ gulp.task('buildCoreCSS', () => {
     .pipe(gulp.dest('./dist/assets/css'));
 });
 gulp.task('buildCoreJS', () => {
-    return gulp.src(['./src/assets/vendors/jquery/jquery.min.js','./src/assets/vendors/bootstrap/js/bootstrap.min.js'])
+    return gulp.src(['./src/assets/vendors/bootstrap/js/bootstrap.bundle.min.js','./src/assets/vendors/jquery/jquery.min.js','./src/assets/js/main.js'])
     .pipe(concat('core.min.js'))
     .pipe(gulp.dest('./dist/assets/js'));
 });
@@ -123,7 +119,8 @@ gulp.task('buildCoreFiles', series('buildCoreCSS','buildCoreJS','buildThemeCSS',
 gulp.task('compileViews', function buildHTML() {
     return gulp.src('./src/views/index.pug')
     .pipe(pug({
-      pretty: true
+      pretty: true,
+      data: config
     }))
     .pipe(gulp.dest('./dist'));
   });

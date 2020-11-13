@@ -1,7 +1,10 @@
-footer(class="main-footer fixed-footer footer-light navbar-shadow")
-        p(class="clearfix blue-grey lighten-2 mb-0")
-            span(class="float-md-left d-block d-md-inline-block") 
-                | COPYRIGHT &copy; 2020 
-                a(class="text-bold-800 grey darken-2" href="" target="_blank") BLUEJAYDIGITAL, 
-                | all rights reserved
-            span(class="float-md-right d-none d-md-block") Text
+footer(class="footer")
+  div(class="container")
+    div(class="row")
+      div(class="col-md-6") 2020 © #{personal.firstName} #{personal.lastName} - #{personal.website}
+      div(class="col-md-6")
+        div(class="text-md-right footer-links d-none d-md-block")
+          a(href="javascript: void(0);") About
+          a(href="javascript: void(0);") Support
+          a(href="javascript: void(0);") Contact Us
+script(src="./assets/fonts/feather-icons/dist/feather.js")

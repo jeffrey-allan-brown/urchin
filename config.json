@@ -4,7 +4,8 @@
     "lastName": "Last",
     "emailAddress": "email@address.com",
     "phoneNumber": "Phone Number",
-    "companyName": "Company Name"
+    "companyName": "Company Name",
+    "website": "https://website.com"
   },
   "app": {
     "appTheme": "default",
