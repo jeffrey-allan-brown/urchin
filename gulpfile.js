@@ -109,8 +109,12 @@ gulp.task('buildThemeFonts', () => {
     return gulp.src(['./src/assets/fonts/feather-icons/**'])
     .pipe(gulp.dest('./dist/assets/fonts/feather-icons'));
 });
+gulp.task('buildThemeImages', () => {
+    return gulp.src(['./src/assets/images/**'])
+    .pipe(gulp.dest('./dist/assets/images'));
+});
 
-gulp.task('buildCoreFiles', series('buildCoreCSS','buildCoreJS','buildThemeCSS','buildThemeFonts'));
+gulp.task('buildCoreFiles', series('buildCoreCSS','buildCoreJS','buildThemeCSS','buildThemeFonts','buildThemeImages'));
 
 
 // Compile Views //

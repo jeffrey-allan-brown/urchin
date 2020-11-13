@@ -115,6 +115,23 @@ $social-colors: (
 // ------------------------------
 // Available Theme Presets
 
+$theme-default: (
+  primary: #007bff,
+  secondary: #6C757D,
+  tertiary: #E0FBFC,
+  success:#28a745,
+  warning:#ffc107,
+  danger:#dc3545,
+  info:#17a2b8,
+  light: #f8f9fa,
+  light-accent:#dee2e6,
+  light-shades:#EFEEEC,
+  dark: #343a40,
+  dark-accent:#495057,
+  dark-shades:#221B1B,
+);
+
+
 $theme-malaise: (
   primary: #EB4638,
   secondary: #4D6CFA,
@@ -150,5 +167,26 @@ $theme-pacific: (
 $theme-ranchhand: ( 
 
 );
+
+
+$theme-presets: () !default;
+$theme-presets: map-merge(
+  (
+    "theme-default":    $theme-default
+  ),
+  $theme-presets
+);
+
+@each $theme-preset, $i in $theme-presets {
+  body {
+      &.#{$theme-preset} {
+          background-color: $primary;
+
+          @if $theme-preset == "theme-default" {
+              color: #1231d3;
+          }
+      }	
+  }
+}
 
 // ------------------------------

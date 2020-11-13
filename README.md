@@ -9,7 +9,7 @@
 :ocean: Full component and module toolkit for starting HTML-based projects. 
 
 ## Introduction
-TBD
+Urchin was developed to give beginner developers a way to quickly create a front-end interface without having to comb through hundreds of lines of source code and insert their own information. All a user needs to do is update the configuration file with their preferred settings and run the setup command. Urchin takes care of the rest, and builds a fully-populated set of files that are ready-to-use. 
 
 ## Table of Contents
 - [System Requirements](#system-requirements)

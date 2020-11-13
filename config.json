@@ -20,6 +20,6 @@
   },
   "modules": {
     "header-nav": "true",
-    "main-nav": "true"
+    "bottom-nav": "true"
   }
 }
