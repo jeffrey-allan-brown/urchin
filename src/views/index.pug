@@ -1,9 +1,11 @@
 doctype html
-html(lang="en")
+- 
+  var x = app.appTheme
+html(class="theme-" + x)
 
   include ../partials/_head.pug
 
-  body#theme-default
+  body
     include ../partials/_header-navbar.pug
 
 
@@ -11,3 +13,4 @@ html(lang="en")
 
 
     include ../partials/_footer.pug
+

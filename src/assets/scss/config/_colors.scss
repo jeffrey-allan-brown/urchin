@@ -1,5 +1,6 @@
-// Color Configuration Options //
-// Update color codes to customize default values for various hues //
+// ------------------------------
+// Color Configuration Options
+
 $white:    #ffffff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
@@ -120,59 +121,85 @@ $social-colors: (
 // ------------------------------
 // Available Theme Presets
 
-$theme-default: (
-  primary: #007bff,
-  secondary: #6C757D,
-  tertiary: #E0FBFC,
-  success:#28a745,
-  warning:#ffc107,
-  danger:#dc3545,
-  info:#17a2b8,
-  light: #f8f9fa,
-  light-accent:#dee2e6,
-  light-shades:#EFEEEC,
-  dark: #343a40,
-  dark-accent:#495057,
-  dark-shades:#221B1B,
-);
+$themes: (
+    default: (
+      primary: #007bff,
+      secondary: #6C757D,
+      tertiary: #E0FBFC,
+      success:#28a745,
+      warning:#ffc107,
+      danger:#dc3545,
+      info:#17a2b8,
+      light: #f8f9fa,
+      light-accent:#dee2e6,
+      light-shades:#EFEEEC,
+      dark: #343a40,
+      dark-accent:#495057,
+      dark-shades:#221B1B,
+    ),
+    malaise: (
+      primary: #EB4638,
+      secondary: #4D6CFA,
+      tertiary: #05A8AA,
+      light-accent:#8A8A90,
+      light-shades:#EFEEEC,
+      dark-accent:#AD885F,
+      dark-shades:#221B1B,
+    ),
+    regal: (
+      primary: #ECA269,
+      secondary: #BBE1C3,
+      tertiary: #A7CDBD,
+      light-accent:#839ABE,
+      light-shades:#ECF2F0,
+      dark-accent:#706A92,
+      dark-shades:#A4346F,
+    ),
+    locksmith:(
 
+    ),
+    triage:(
 
-$theme-malaise: (
-  primary: #EB4638,
-  secondary: #4D6CFA,
-  tertiary: #05A8AA,
-  light-accent:#8A8A90,
-  light-shades:#EFEEEC,
-  dark-accent:#AD885F,
-  dark-shades:#221B1B,
-);
+    ),
+    pacific:(
 
-$theme-regal: (
-  primary: #ECA269,
-  secondary: #BBE1C3,
-  tertiary: #A7CDBD,
-  light-accent:#839ABE,
-  light-shades:#ECF2F0,
-  dark-accent:#706A92,
-  dark-shades:#A4346F,
-);
+    ),
+    ranchhand:(
 
-$theme-locksmith: (
-
-);
-
-$theme-triage: (
-
-);
-
-$theme-pacific: (
-
-);
-
-$theme-ranchhand: ( 
-
-);
-
-
+    )
+  );  
 
 // ------------------------------
+// Implement Theme Functionality
+  $theme-map: () !default;
+  @mixin themify($themes) {
+    @each $theme, $map in $themes {
+      .theme-#{$theme} & {
+        $theme-map: () !global;
+        @each $key, $submap in $map {
+          $value: map-get(map-get($themes, $theme), '#{$key}');
+          $theme-map: map-merge($theme-map, ($key: $value)) !global;
+        }
+        @content;
+        $theme-map: null !global;
+      }
+    }
+  }
+  @function themed($key) {
+    @return map-get($theme-map, $key);
+  }
+  
+  /*
+   * Actual styles for the app
+   */
+
+   
+     body {
+      .navbar {
+        @include themify($themes) {
+         background-color: themed('primary') !important; 
+       }
+      }
+     }
+   
+   
