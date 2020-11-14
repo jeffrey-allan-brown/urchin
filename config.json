@@ -10,7 +10,7 @@
   "app": {
     "appTheme": "default",
     "direction": "ltr",
-    "layoutStyle": "horizontalNavigation",
+    "layoutStyle": "horizontalNavigation", 
     "glossary": {
       "html":"html",
       "boilerplate":"boilerplate",

@@ -92,7 +92,7 @@ gulp.task('buildCoreCSS', () => {
     .pipe(gulp.dest('./dist/assets/css'));
 });
 gulp.task('buildCoreJS', () => {
-    return gulp.src(['./src/assets/vendors/bootstrap/js/bootstrap.bundle.min.js','./src/assets/vendors/jquery/jquery.min.js','./src/assets/js/main.js'])
+    return gulp.src(['./src/assets/vendors/jquery/jquery.min.js','./src/assets/vendors/bootstrap/js/bootstrap.bundle.min.js','./src/assets/js/main.js'])
     .pipe(concat('core.min.js'))
     .pipe(gulp.dest('./dist/assets/js'));
 });

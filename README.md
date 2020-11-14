@@ -13,7 +13,7 @@ Urchin was developed to give beginner developers a way to quickly create a front
 
 ## Table of Contents
 - [System Requirements](#system-requirements)
-- [Installation](#installation)
+- [Quick Start](#quickstart)
 - [Configuration](#configuration)
 - [Usage](#usage)
 - [Features](#features)
@@ -36,9 +36,9 @@ View Engine                         | Pug
 Front-End                           | Bootstrap
 Styling                             | SASS
 
-## :inbox_tray: Installation
+## :inbox_tray: Quick Start
 
-To get started, first go to the `gulpfile.js` file and edit the configuration objects, adding your personal information and application build preferences.
+To get started, first go to the `config.json` file and edit the configuration objects, adding your personal information and application build preferences.
 Then, run the setup script from the root directory.
 
 ```
@@ -63,6 +63,7 @@ This will install all required modules, run Gulp task automation, and compile ap
 |   |   ├── vendors
 |   ├── index.html
 .gitignore
+ config.json
  gulpfile.js
  LICENSE
  package.json

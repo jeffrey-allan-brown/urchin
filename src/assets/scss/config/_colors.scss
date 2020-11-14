@@ -169,24 +169,5 @@ $theme-ranchhand: (
 );
 
 
-$theme-presets: () !default;
-$theme-presets: map-merge(
-  (
-    "theme-default":    $theme-default
-  ),
-  $theme-presets
-);
-
-@each $theme-preset, $i in $theme-presets {
-  body {
-      &.#{$theme-preset} {
-          background-color: $primary;
-
-          @if $theme-preset == "theme-default" {
-              color: #1231d3;
-          }
-      }	
-  }
-}
 
 // ------------------------------
