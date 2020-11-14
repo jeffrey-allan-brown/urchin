@@ -59,14 +59,19 @@ $colors: map-merge(
   $colors
 );
 
-$primary:       $blue !default;
-$secondary:     $gray-600 !default;
-$success:       $green !default;
-$info:          $cyan !default;
-$warning:       $yellow !default;
-$danger:        $red !default;
-$light:         $gray-100 !default;
-$dark:          $gray-800 !default;
+$primary: #007bff;
+$secondary: #6C757D;
+$tertiary: #E0FBFC;
+$success:#28a745;
+$warning:#ffc107;
+$danger:#dc3545;
+$info:#17a2b8;
+$light: #f8f9fa;
+$light-accent:#dee2e6;
+$light-shades:#EFEEEC;
+$dark: #343a40;
+$dark-accent:#495057;
+$dark-shades:#221B1B;
 
 $theme-colors: () !default;
 $theme-colors: map-merge(
