@@ -13,7 +13,7 @@ Urchin was developed to give beginner developers a way to quickly create a front
 
 ## Table of Contents
 - [System Requirements](#system-requirements)
-- [Quick Start](#quickstart)
+- [Quick Start](#inbox_tray-quick-start)
 - [Configuration](#configuration)
 - [Usage](#usage)
 - [Features](#features)
@@ -24,7 +24,7 @@ Urchin was developed to give beginner developers a way to quickly create a front
 ## System Requirements
 - Node.js ~14.15.0
 - NPM ~6.14.8
-
+    
 Urchin uses a core set of packages for its functionality:
 
 *Focus*                             |  *Tool(s)*

@@ -1,11 +1,9 @@
 .container-fluid
   .row
-    nav(id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse")
+    nav(id="sidebarMenu" class="col-xl-1 col-lg-1 col-md-2 col-sm-2 col-xs-2 pt-4 d-md-block  sidebar collapse")
       .sidebar-sticky.pt-3
-        h4(class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted")
-        span Saved Reports
         ul(class="nav flex-column")
-          li(class="nav-item")
+          li(class="nav-item pt-3")
             a(class="nav-link active" href="#")
               i(class="mr-4" data-feather="layers")
               | Dashboards
@@ -20,7 +18,15 @@
           li(class="nav-item")
             a(class="nav-link active" href="#")
               i(class="mr-4" data-feather="box")
+              | Themes
+          li(class="nav-item")
+            a(class="nav-link active" href="#")
+              i(class="mr-4" data-feather="box")
               | UI Elements
+          li(class="nav-item")
+            a(class="nav-link active" href="#")
+              i(class="mr-4" data-feather="bar-chart")
+              | Icons
           li(class="nav-item")
             a(class="nav-link active" href="#")
               i(class="mr-4" data-feather="server")
@@ -39,14 +45,18 @@
               | Charts
           li(class="nav-item")
             a(class="nav-link active" href="#")
+              i(class="mr-4" data-feather="bar-chart")
+              | Widgets
+          li(class="nav-item")
+            a(class="nav-link active" href="#")
               i(class="mr-4" data-feather="book-open")
               | Pages
           li(class="nav-item")
             a(class="nav-link active" href="#")
               i(class="mr-4" data-feather="log-in")
-              | Authentication
-    main(role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4")
-      div(class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom")
+              | Auth
+    main(role="main" class="col-md-9 col-lg-10 px-md-4 pt-5")
+      div(class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center mt-3 pb-2 mb-3 border-bottom")
         h1(class="h2") Dashboard
         div(class="btn-toolbar mb-2 mb-md-0")
           div(class="btn-group mr-2")

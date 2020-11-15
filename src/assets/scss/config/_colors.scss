@@ -123,37 +123,41 @@ $social-colors: (
 
 $themes: (
     default: (
-      primary: #007bff,
-      secondary: #6C757D,
-      tertiary: #E0FBFC,
+      primary: #393d3f,
+      secondary: #546A7B,
+      tertiary: #62929E,
       success:#28a745,
       warning:#ffc107,
       danger:#dc3545,
       info:#17a2b8,
-      light: #f8f9fa,
+      light: #FDFDFF,
       light-accent:#dee2e6,
-      light-shades:#EFEEEC,
-      dark: #343a40,
+      light-shades:#ebebff,
+      dark: #191308,
       dark-accent:#495057,
       dark-shades:#221B1B,
     ),
     malaise: (
-      primary: #EB4638,
-      secondary: #4D6CFA,
-      tertiary: #05A8AA,
-      light-accent:#8A8A90,
-      light-shades:#EFEEEC,
-      dark-accent:#AD885F,
+      primary: #E63946,
+      secondary: #457B9D,
+      tertiary: #A8DADC,
+      light: #FDFDFF,
+      light-accent:#dee2e6,
+      light-shades:#ebebff,
+      dark: #191308,
+      dark-accent:#495057,
       dark-shades:#221B1B,
     ),
     regal: (
       primary: #ECA269,
       secondary: #BBE1C3,
       tertiary: #A7CDBD,
-      light-accent:#839ABE,
-      light-shades:#ECF2F0,
-      dark-accent:#706A92,
-      dark-shades:#A4346F,
+      light: #FDFDFF,
+      light-accent:#dee2e6,
+      light-shades:#ebebff,
+      dark: #191308,
+      dark-accent:#495057,
+      dark-shades:#221B1B,
     ),
     locksmith:(
 
@@ -188,18 +192,4 @@ $themes: (
   @function themed($key) {
     @return map-get($theme-map, $key);
   }
-  
-  /*
-   * Actual styles for the app
-   */
 
-   
-     body {
-      .navbar {
-        @include themify($themes) {
-         background-color: themed('primary') !important; 
-       }
-      }
-     }
-   
-   
