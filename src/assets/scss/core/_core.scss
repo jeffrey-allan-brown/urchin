@@ -8,7 +8,10 @@
       position: fixed;
       left: 0;
       right: 0;
+      top:0;
       z-index: 1001;
+      box-shadow: 3px 0 10px 0 rgba(183, 192, 206, 0.2);
+      transition: width .1s ease, left .1s ease;
       a {
         color: themed('dark') !important;
       }
@@ -28,9 +31,25 @@
     }
   }
 
-
-
-
   .main-content {
     padding-top: $topnav-base-height;
   }
+
+  .main-wrapper .page-wrapper {
+    min-height: 100vh;
+    background: $content-bg;
+    width: calc(100% - $sidenav-base-width);
+    margin-left: $sidenav-base-width;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-transition: margin .1s ease, width .1s ease;
+    transition: margin .1s ease, width .1s ease;
+}
+
+.main-wrapper .page-wrapper .page-content {
+    flex-grow: 1;
+    padding: 25px;
+    margin-top: 60px;
+}

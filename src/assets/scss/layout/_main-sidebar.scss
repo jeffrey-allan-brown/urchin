@@ -1,0 +1,13 @@
+.sidebar {
+  width: 15em;
+  height: 100vh;
+  transition: .4s;
+  padding-top: 4em;
+  position: fixed;
+  left: 0;
+  top:0;
+  background-color: $sidenav-light-bg;
+  &.is-closed {
+    transform: translateX(-16em);
+  }
+}	
