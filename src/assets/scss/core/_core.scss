@@ -25,7 +25,8 @@
       .nav-link {
         @include themify($themes) {
           color: themed('dark') !important;;
-        }
+      }
+
       }
     }
   }
@@ -66,4 +67,108 @@
       right: 0;
     }
   }
+}
+
+
+
+
+.datepicker {
+  > div {
+    display: initial;
+    padding: 0.375rem 0.75rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: 2px;
+  }
+
+  &.input-group {
+    padding: 0;
+    border: 1px solid $dark;
+    border-radius: 5px;
+    .form-control {
+      border: 0;
+    }
+    .input-group-addon {
+      padding: 0 10px;
+      border-left: 1px solid $dark;
+      svg {
+        width: 18px;
+        color: $text-muted;
+      }
+    }
+  }
+}
+
+.datepicker-dropdown {
+  &:after {
+    border-bottom-color: $dropdown-bg;
+  }
+  &:before {
+    border-bottom-color: $dark;
+  }
+  &.datepicker-orient-top {
+    &:before,
+    &:after {
+      top: auto;
+    }
+    &:after {
+      border-top-color: $dropdown-bg;
+    }
+    &:before {
+      border-top-color: $dark;
+    }
+  }
+}
+.dashboard-date {
+  width: 211px;
+  &.datepicker {
+    &.input-group {
+      border: 1px solid theme-color(dark);
+      input {
+        height: 32px;
+        background: transparent;
+        // width: 170px;
+        color: $text-muted;
+      }
+      span {
+        border-left: none;
+        border-right: 1px solid theme-color(dark);
+      }
+    }
+  }
+}
+
+#flotChart1 {
+  height: 350px;
+  @media(max-width: 767px) {
+    height: 200px;
+  }
+}
+#progressbar1 {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  svg {
+    height: 200px;
+    width: 200px;
+    fill: none;
+    stroke-width: 10;
+    stroke-linecap: round;
+  }
+}
+
+.monthly-sales-chart-wrapper {
+  height: 270px;
+  @media(max-width: 767px) {
+    height: 200px;
+  }
+}
+
+.grid-margin {
+  margin-bottom: 20px;
 }

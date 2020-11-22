@@ -71,7 +71,8 @@ gulp.task('cloneVendorJS', () => {
     var script2 = gulp.src('./node_modules/bootstrap/dist/js/*.js').pipe(gulp.dest('./src/assets/vendors/bootstrap/js'));
     var script3 = gulp.src('./node_modules/jquery/dist/jquery.min.js').pipe(gulp.dest('./src/assets/vendors/jquery'));
     var script4 = gulp.src('./node_modules/feather-icons/**').pipe(gulp.dest('./src/assets/fonts/feather-icons'));
-    return merge(script1,script2,script3,script4);
+    var script5 = gulp.src('./node_modules/bootstrap-datepicker/js/*.js').pipe(gulp.dest('./src/assets/vendors/bootstrap/js'));
+    return merge(script1,script2,script3,script4,script5);
 });
 
 gulp.task('initialSetup', series('cleanBuild','cloneVendorSCSS','cloneVendorJS'));
@@ -92,7 +93,7 @@ gulp.task('buildCoreCSS', () => {
     .pipe(gulp.dest('./dist/assets/css'));
 });
 gulp.task('buildCoreJS', () => {
-    return gulp.src(['./src/assets/vendors/jquery/jquery.min.js','./src/assets/vendors/bootstrap/js/bootstrap.bundle.min.js','./src/assets/js/main.js'])
+    return gulp.src(['./src/assets/vendors/jquery/jquery.min.js','./src/assets/vendors/bootstrap/js/bootstrap.bundle.min.js','./src/assets/vendors/bootstrap/js/bootstrap-datepicker.js','./src/assets/js/main.js'])
     .pipe(concat('core.min.js'))
     .pipe(gulp.dest('./dist/assets/js'));
 });

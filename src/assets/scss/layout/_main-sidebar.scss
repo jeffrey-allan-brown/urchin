@@ -303,6 +303,9 @@
       padding: 25px 10px 50px 15px;
       .nav-item {
         position: relative;
+        .disabled {
+          color: #dee2e6 !important;
+        }
         .nav-link {
           display: -webkit-flex;
           display: flex;
@@ -310,6 +313,7 @@
           height: 50px;
           white-space: nowrap;
           color: $body-color;
+
           .link-icon {
             width: 16px;
             height: 16px;
@@ -371,6 +375,9 @@
         }
         &.active {
           .nav-link {
+            .disabled a {
+              color: theme-color(light);
+            }
             color: theme-color(primary);
             &::before {
               content: '';
