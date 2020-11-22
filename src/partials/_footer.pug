@@ -10,11 +10,17 @@ footer(class="footer")
 script(src="./assets/fonts/feather-icons/dist/feather.js")
 script(src="./assets/js/core.min.js")
 script.
-    var toggleBtn = document.querySelector('.sidebar-toggle');
+    var mainWrapper = document.querySelector('.main-wrapper');
+    var toggleBtn = document.querySelector('.sidebar-toggler');
     var sidebar = document.querySelector('.sidebar');
 
   	toggleBtn.addEventListener('click', function() {
-    	toggleBtn.classList.toggle('is-closed');
-    	sidebar.classList.toggle('is-closed');
-  	})
-  
+      if(mainWrapper.className == "main-wrapper") {
+        toggleBtn.className = "sidebar-toggler active";
+        mainWrapper.className="main-wrapper sidebar-closed"
+      }
+      else {
+        toggleBtn.className = "sidebar-toggler not-active"
+        mainWrapper.className="main-wrapper"
+      }
+    })

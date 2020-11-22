@@ -12,22 +12,6 @@
       z-index: 1001;
       box-shadow: 3px 0 10px 0 rgba(183, 192, 206, 0.2);
       transition: width .1s ease, left .1s ease;
-      a {
-        color: themed('dark') !important;
-      }
-    }
-  }
-
-
-  #sidebarMenu {
-    @include themify($themes) {
-      background-color: themed('light') !important;
-      box-shadow: 0 2px 6px -2px rgba(0,0,0,.06),0 2px 6px 0 rgba(0,0,0,.02);
-      width: $sidenav-base-width;
-      padding-top: $topnav-base-height;
-      a {
-        color: themed('dark') !important;
-      }
     }
   }
 
@@ -38,18 +22,31 @@
   .main-wrapper .page-wrapper {
     min-height: 100vh;
     background: $content-bg;
-    width: calc(100% - $sidenav-base-width);
-    margin-left: $sidenav-base-width;
+    width: calc(100% - $sidebar-base-width);
     display: -webkit-flex;
+    margin-left: $sidebar-base-width;
     display: flex;
     -webkit-flex-direction: column;
     flex-direction: column;
     -webkit-transition: margin .1s ease, width .1s ease;
     transition: margin .1s ease, width .1s ease;
-}
 
+  }
 .main-wrapper .page-wrapper .page-content {
     flex-grow: 1;
     padding: 25px;
     margin-top: 60px;
+}
+
+.sidebar-closed {
+  transition: .4s;
+  .page-wrapper {
+    width: calc(100% - #{$sidebar-closed-width});
+    margin-left: $sidebar-closed-width;
+    .navbar {
+      width: calc(100% - #{$sidebar-closed-width});
+      left: $sidebar-closed-width;
+      right: 0;
+    }
+  }
 }
