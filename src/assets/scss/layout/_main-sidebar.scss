@@ -300,10 +300,12 @@
             box-shadow: 0 8px 10px 0 rgba(183,192,206,.2); 
     
     .nav {
-      padding: 25px 25px 50px 25px;
+      padding: 25px 10px 50px 15px;
       .nav-item {
         position: relative;
         .nav-link {
+          display: -webkit-flex;
+          display: flex;
           padding: 0;
           height: 50px;
           white-space: nowrap;
@@ -316,14 +318,13 @@
             color: inherit;
           }
           .link-title {
-            margin-left: 30px;
             font-size: 14px;
             -webkit-transition: all .2s ease-in-out;
             transition: all .2s ease-in-out;
           }
           .link-arrow {
             width: 14px;
-            height: 14px;
+            height: 24px;
             margin-left: auto;
             -webkit-transition: all .3s ease;
             -webkit-transition: all .3s ease-in-out;
@@ -360,7 +361,7 @@
           .nav-link {
             color: theme-color(primary);
             .link-title {
-              margin-left: 31px;
+              margin-left: 0px;
             }
             .link-icon {
               color: theme-color(primary);
@@ -387,12 +388,13 @@
         }
       }
       &.sub-menu {
-        padding: 0 0 15px 33px;
+        padding: 0 0 5px 40px;
+        display: block;
         .nav-item {
           position: relative;
           .nav-link {
             height: 25px;
-            color: theme-color(primary);
+            color: theme-color(dark);
             font-size: 13px;
             -webkit-transition: all .3s ease-in-out;
             transition: all .3s ease-in-out;

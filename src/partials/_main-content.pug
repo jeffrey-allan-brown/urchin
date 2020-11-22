@@ -1,0 +1,39 @@
+.d-flex.justify-content-between.align-items-center.flex-wrap.my-3
+	div
+		h1.mb-3.mb-md-0 Welcome #{personal.firstName} #{personal.lastName}
+		p.lead Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
+	.d-flex.align-items-center.flex-wrap.text-nowrap
+		.input-group.date.datepicker.dashboard-date.mr-2.mb-2.mb-md-0.d-md-none.d-xl-flex(id="dashboardDate")
+			span.input-group-addon.bg-transparent
+				i.text-dark(data-feather="calendar")
+			input.form-control(type="text")
+			button.btn.btn-outline-darken.btn-icon-text.mr-2.d-none.d-md-block(type="button")
+				i.btn-icon-prepend(data-feather="download") Import
+			button.btn.btn-outline-dark.btn-icon-text.mr-2.d-none.d-md-block(type="button")
+				i.btn-icon-prepend(data-feather="printer") Print
+			button.btn.btn-dark.btn-icon-text.mr-2.d-none.d-md-block(type="button")
+				i.btn-icon-prepend(data-feather="download-cloud") Download Report
+.row
+	.col-12.col-xl-12.stretch-card
+		.row.flex-grow
+			.col-md-4.grid-margin.stretch-card
+				.card
+					.card-body
+						.d-flex.justify-content-between.align-items-baseline
+							h6.card-title.mb-0 New Customers
+							.dropdown.mb-2
+								button.btn.p-0(type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+									i.icon-lg.text-muted.pb-3(data-feather="more-horizontal")
+								.dropdown-menu(aria-labelledby="dropdownMenuButton")
+									a.dropdown-item.d-flex.align-items-center(href="")
+										i.icon-sm.mr-2(data-feather="eye")
+										span(class="")
+						.row
+							.col-6.col-md-12.col-xl-5
+								h3.mb-2 123123
+								.d-flex.align-items-baseline
+									p.text-success
+										span +3.3%
+										i.icon-sm.mb-1(data-feather="arrow-up")
+							.col-6.col-md-12.col-xl-7
+								.mt-md-3.mt-xl-0(id="apexChart1")

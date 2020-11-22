@@ -9,50 +9,132 @@ nav(class="d-md-block sidebar")
 	.sidebar-body
 		ul(class="nav flex-column")
 			li(class="nav-item")
-				a(class="nav-link" href="#")
+				a(class="nav-link" data-toggle="collapse" href="#dashboards" role="button" aria-expanded="false" aria-controls="dashboards")
 					i(class="mr-4" data-feather="layers")
-					| Dashboards
+					span.link-title 
+						| Dashboards
+					i(class="link-arrow" data-feather="chevron-down")
+				.collapse(id="dashboards")
+					ul.nav.sub-menu
+						li.nav-item
+							a.nav-link(href="#") Main
+						li.nav-item
+							a.nav-link(href="#") Ecommerce
+						li.nav-item
+							a.nav-link(href="#") Cryptocurrency
 			li(class="nav-item")
-				a(class="nav-link" href="#")
+				a(class="nav-link" data-toggle="collapse" href="#applications" role="button" aria-expanded="false" aria-controls="applications")
 					i(class="mr-4" data-feather="layers")
-					| Applications
+					span.link-title 
+						| Applications
+					i(class="link-arrow" data-feather="chevron-down")
+				.collapse(id="applications")
+					ul.nav.sub-menu
+						li.nav-item
+							a.nav-link(href="#") Email
+						li.nav-item
+							a.nav-link(href="#") Chat
+						li.nav-item
+							a.nav-link(href="#") Calendar
 			li(class="nav-item")
-				a(class="nav-link" href="#")
+				a(class="nav-link" data-toggle="collapse" href="#themes" role="button" aria-expanded="false" aria-controls="themes")
 					i(class="mr-4" data-feather="layers")
-					| Themes
+					span.link-title 
+						| Themes
+					i(class="link-arrow" data-feather="chevron-down")
+				.collapse(id="themes")
+					ul.nav.sub-menu
+						li.nav-item
+							a.nav-link(href="#") Default
+						li.nav-item
+							a.nav-link(href="#") Malaise
+						li.nav-item
+							a.nav-link(href="#") Regal
 			li(class="nav-item")
-				a(class="nav-link" href="#")
-					i(class="mr-4" data-feather="layers")
-					| UI Elements
+				a(class="nav-link" data-toggle="collapse" href="#uiElements" role="button" aria-expanded="false" aria-controls="uiElements")
+					i(class="mr-4" data-feather="feather")
+					span.link-title 
+						| UI Elements
+					i(class="link-arrow" data-feather="chevron-down")
+				.collapse(id="uiElements")
+					ul.nav.sub-menu
+						li.nav-item
+							a.nav-link(href="#") Alerts
+						li.nav-item
+							a.nav-link(href="#") Badges
+						li.nav-item
+							a.nav-link(href="#") Breadcrumbs
+						li.nav-item
+							a.nav-link(href="#") Buttons
+						li.nav-item
+							a.nav-link(href="#") Button Groups
 			li(class="nav-item")
-				a(class="nav-link" href="#")
-					i(class="mr-4" data-feather="layers")
-					| Icons
+				a(class="nav-link" data-toggle="collapse" href="#icons" role="button" aria-expanded="false" aria-controls="icons")
+					i(class="mr-4" data-feather="smile")
+					span.link-title 
+						| Icons
+					i(class="link-arrow" data-feather="chevron-down")
+				.collapse(id="icons")
+					ul.nav.sub-menu
+						li.nav-item
+							a.nav-link(href="#") Icons
 			li(class="nav-item")
-				a(class="nav-link" href="#")
+				a(class="nav-link" data-toggle="collapse" href="#components" role="button" aria-expanded="false" aria-controls="components")
 					i(class="mr-4" data-feather="layers")
-					| Components
+					span.link-title 
+						| Components
+					i(class="link-arrow" data-feather="chevron-down")
+				.collapse(id="components")
+					ul.nav.sub-menu
+						li.nav-item
+							a.nav-link(href="#") 1
 			li(class="nav-item")
-				a(class="nav-link" href="#")
-					i(class="mr-4" data-feather="layers")
-					| Forms
+				a(class="nav-link" data-toggle="collapse" href="#forms" role="button" aria-expanded="false" aria-controls="forms")
+					i(class="mr-4" data-feather="inbox")
+					span.link-title 
+						| Forms
+					i(class="link-arrow" data-feather="chevron-down")
+				.collapse(id="forms")
+					ul.nav.sub-menu
+						li.nav-item
+							a.nav-link(href="#") 1
 			li(class="nav-item")
-				a(class="nav-link" href="#")
-					i(class="mr-4" data-feather="layers")
-					| Tables
+				a(class="nav-link" data-toggle="collapse" href="#tables" role="button" aria-expanded="false" aria-controls="tables")
+					i(class="mr-4" data-feather="layout")
+					span.link-title 
+						| Tables
+					i(class="link-arrow" data-feather="chevron-down")
+				.collapse(id="tables")
+					ul.nav.sub-menu
+						li.nav-item
+							a.nav-link(href="#") 1
 			li(class="nav-item")
-				a(class="nav-link" href="#")
-					i(class="mr-4" data-feather="layers")
-					| Charts
+				a(class="nav-link" data-toggle="collapse" href="#charts" role="button" aria-expanded="false" aria-controls="charts")
+					i(class="mr-4" data-feather="pie-chart")
+					span.link-title 
+						| Charts
+					i(class="link-arrow" data-feather="chevron-down")
+				.collapse(id="charts")
+					ul.nav.sub-menu
+						li.nav-item
+							a.nav-link(href="#") 1
 			li(class="nav-item")
-				a(class="nav-link" href="#")
+				a(class="nav-link" data-toggle="collapse" href="#pages" role="button" aria-expanded="false" aria-controls="pages")
 					i(class="mr-4" data-feather="layers")
-					| Widgets
+					span.link-title 
+						| Pages
+					i(class="link-arrow" data-feather="chevron-down")
+				.collapse(id="pages")
+					ul.nav.sub-menu
+						li.nav-item
+							a.nav-link(href="#") 1
 			li(class="nav-item")
-				a(class="nav-link" href="#")
+				a(class="nav-link" data-toggle="collapse" href="#authentication" role="button" aria-expanded="false" aria-controls="authentication")
 					i(class="mr-4" data-feather="layers")
-					| Pages
-			li(class="nav-item")
-				a(class="nav-link" href="#")
-					i(class="mr-4" data-feather="layers")
-					| Auth
+					span.link-title 
+						| Auth
+					i(class="link-arrow" data-feather="chevron-down")
+				.collapse(id="authentication")
+					ul.nav.sub-menu
+						li.nav-item
+							a.nav-link(href="#") 1
