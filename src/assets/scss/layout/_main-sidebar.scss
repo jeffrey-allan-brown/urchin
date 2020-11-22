@@ -1,17 +1,19 @@
 .sidebar {
-  width: 15em;
+  width: $sidebar-base-width;
   height: 100vh;
-  transition: .4s;
+  transition: width .1s ease, left .1s ease;
   position: fixed;
   left: 0;
   top:0;
-  background-color: $sidebar-light-bg;
+  @include themify($themes) {
+    background-color: themed('light') !important;
+  }
+
     .sidebar-closed & {
       transform: translateX(-$sidebar-base-width + 70);
     }
 
   .sidebar-header {
-    background: $sidebar-light-bg;
     height: $topnav-base-height;
     display: flex;
     display: webkit-flex;
@@ -37,9 +39,9 @@
       font-size: 25px;
       line-height: 19px;
       letter-spacing: -1px;
-      color: #031a61;
+      color: theme-color(dark);
       span {
-        color: theme-color(primary);
+        color: theme-color(dark);
         font-weight: 300;
       }
     }
@@ -289,3 +291,144 @@
     }
   }
 }
+.sidebar-body {
+    max-height: calc(100% - #{$topnav-base-height});
+    position: relative;
+    border-right: 1px solid $sidebar-light-border-color;
+    height: 100%;
+    -webkit-box-shadow: 0 8px 10px 0 rgba(183,192,206,.2);
+            box-shadow: 0 8px 10px 0 rgba(183,192,206,.2); 
+    
+    .nav {
+      padding: 25px 25px 50px 25px;
+      .nav-item {
+        position: relative;
+        .nav-link {
+          padding: 0;
+          height: 50px;
+          white-space: nowrap;
+          color: $body-color;
+          .link-icon {
+            width: 16px;
+            height: 16px;
+            fill: rgba(233, 236, 239, 0.21);
+            position: absolute;
+            color: inherit;
+          }
+          .link-title {
+            margin-left: 30px;
+            font-size: 14px;
+            -webkit-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+          }
+          .link-arrow {
+            width: 14px;
+            height: 14px;
+            margin-left: auto;
+            -webkit-transition: all .3s ease;
+            -webkit-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+            color: inherit;
+          }
+          .link-icon,
+          .link-title,
+          .link-arrow {
+            -webkit-transition: all .3s ease;
+            transition: all .3s ease;
+          }
+          &[aria-expanded="true"] {
+            color: theme-color(primary);
+            .link-arrow {
+              -webkit-transform: rotate(90deg);
+              transform: rotate(180deg);
+            }
+          }
+        }
+        &.nav-category {
+          color: $text-muted;
+          font-size: 11px;
+          text-transform: uppercase;
+          font-weight: 700;
+          letter-spacing: .5px;
+          margin-bottom: 5px;
+          height: 15px;
+          &:not(:first-child) {
+            margin-top: 20px;
+          }
+        }
+        &:hover {
+          .nav-link {
+            color: theme-color(primary);
+            .link-title {
+              margin-left: 31px;
+            }
+            .link-icon {
+              color: theme-color(primary);
+              fill: rgba(239, 243, 255, .5);
+            }
+          }
+        }
+        &.active {
+          .nav-link {
+            color: theme-color(primary);
+            &::before {
+              content: '';
+              width: 3px;
+              height: 26px;
+              background: theme-color(primary);
+              position: absolute;
+              left: -25px;
+            }
+            .link-icon {
+              fill: rgba(239, 243, 255, .5);
+              color: theme-color(primary);
+            }
+          }
+        }
+      }
+      &.sub-menu {
+        padding: 0 0 15px 33px;
+        .nav-item {
+          position: relative;
+          .nav-link {
+            height: 25px;
+            color: theme-color(primary);
+            font-size: 13px;
+            -webkit-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+            &::before {
+              content: '';
+              width: 6px;
+              height: 6px;
+              border-radius: 50%;
+              background: transparent;
+              border: 1px solid darken($border-color, 20%);
+              position: absolute;
+              left: -29px;
+              top: 10px;
+              -webkit-transition: all .7s ease-in-out;
+              -webkit-transition: all .4s ease-in-out;
+              transition: all .4s ease-in-out;
+            }
+            &.active {
+              color: theme-color(primary);
+              &::before {
+              border: 1px solid theme-color(primary);
+              background: theme-color(primary);       
+              }
+            }
+          }
+          &:hover {
+            .nav-link {
+              color: theme-color(primary);
+              margin-left: 3px;
+              &::before {
+                border: 1px solid theme-color(primary);
+                background: theme-color(primary);       
+              }
+            }
+          }
+        }
+      }
+    }
+  }
