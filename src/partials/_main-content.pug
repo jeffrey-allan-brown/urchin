@@ -1,65 +1,81 @@
-.container-fluid
-  .row
-    nav(id="sidebarMenu navbarSupportedContent" class="pb-3 d-md-block sidebar collapse")
-      .sidebar-sticky.pt-3
-        ul(class="nav flex-column")
-          li(class="nav-item")
-            a(class="nav-link active" href="#")
-              i(class="mr-4" data-feather="layers")
-              | Dashboards
-          li(class="nav-item")
-            a(class="nav-link active" href="#")
-              i(class="mr-4" data-feather="grid")
-              | Layouts
-          li(class="nav-item")
-            a(class="nav-link active" href="#")
-              i(class="mr-4" data-feather="grid")
-              | Applications
-          li(class="nav-item")
-            a(class="nav-link active" href="#")
-              i(class="mr-4" data-feather="box")
-              | Themes
-          li(class="nav-item")
-            a(class="nav-link active" href="#")
-              i(class="mr-4" data-feather="box")
-              | UI Elements
-          li(class="nav-item")
-            a(class="nav-link active" href="#")
-              i(class="mr-4" data-feather="bar-chart")
-              | Icons
-          li(class="nav-item")
-            a(class="nav-link active" href="#")
-              i(class="mr-4" data-feather="server")
-              | Components
-          li(class="nav-item")
-            a(class="nav-link active" href="#")
-              i(class="mr-4" data-feather="edit")
-              | Forms
-          li(class="nav-item")
-            a(class="nav-link active" href="#")
-              i(class="mr-4" data-feather="hard-drive")
-              | Tables
-          li(class="nav-item")
-            a(class="nav-link active" href="#")
-              i(class="mr-4" data-feather="bar-chart")
-              | Charts
-          li(class="nav-item")
-            a(class="nav-link active" href="#")
-              i(class="mr-4" data-feather="bar-chart")
-              | Widgets
-          li(class="nav-item")
-            a(class="nav-link active" href="#")
-              i(class="mr-4" data-feather="book-open")
-              | Pages
-          li(class="nav-item")
-            a(class="nav-link active" href="#")
-              i(class="mr-4" data-feather="log-in")
-              | Auth
-
-
-    main(role="main" class="main-content px-md-4")
-      .container-fluid.pt-3
-        h1(class="h2") Dashboard
-        ol(class="breadcrumb mb-4")
-          li(class="breadcrumb-item active") Dashboard
-        .row
+.d-flex.justify-content-between.align-items-center.flex-wrap.my-3
+	div
+		h1.mb-3 Welcome #{personal.firstName} #{personal.lastName}
+		p.lead Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
+	.d-flex.align-items-center.text-nowrap
+		.input-group.date.datepicker.dashboard-date.mr-2.mb-2.mb-md-0.d-md-none.d-xl-flex(id="dashboardDatePicker")
+			span.input-group-addon.bg-transparent
+				i.text-dark(data-feather="calendar")
+			input.form-control(type="text")
+		button.btn.btn-outline-darken.btn-icon-text.mr-2.d-none.d-md-block(type="button")
+			i.btn-icon-prepend(data-feather="download") Import
+		button.btn.btn-outline-dark.btn-icon-text.mr-2.d-none.d-md-block(type="button")
+			i.btn-icon-prepend(data-feather="printer") Print
+		button.btn.btn-dark.btn-icon-text.mr-2.d-none.d-md-block(type="button")
+			i.btn-icon-prepend(data-feather="download-cloud") Download Report
+.row
+	.col-12.col-xl-12.stretch-card
+		.row.flex-grow
+			.col-md-4.px-1
+				.card
+					.card-body
+						.d-flex.justify-content-between.align-items-baseline
+							h6.card-title.mb-0 New Customers
+							.dropdown.mb-2
+								button.btn.p-0.dashboard-card-dropdown(type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+									i.icon-lg.text-muted.pb-3px(data-feather="more-horizontal")
+								.dropdown-menu(aria-labelledby="dropdownMenuButton")
+									a.dropdown-item.d-flex.align-items-center(href="")
+										i.icon-sm.mr-2(data-feather="eye")
+										span(class="")
+						.row
+							.col-6.col-md-12.col-xl-5
+								h4.mb-2 123123
+								.d-flex.align-items-baseline
+									p.text-success
+										span +3.3%
+										i.icon-sm.mb-1(data-feather="arrow-up")
+							.col-6.col-md-12.col-xl-7
+								.mt-md-3.mt-xl-0(id="apexChart1")
+			.col-md-4.px-1
+				.card
+					.card-body
+						.d-flex.justify-content-between.align-items-baseline
+							h6.card-title.mb-0 New Customers
+							.dropdown.mb-2
+								button.btn.p-0(type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+									i.icon-lg.text-muted.pb-3px(data-feather="more-horizontal")
+								.dropdown-menu(aria-labelledby="dropdownMenuButton")
+									a.dropdown-item.d-flex.align-items-center(href="")
+										i.icon-sm.mr-2(data-feather="eye")
+										span(class="")
+						.row
+							.col-6.col-md-12.col-xl-5
+								h4.mb-2 123123
+								.d-flex.align-items-baseline
+									p.text-success
+										span +3.3%
+										i.icon-sm.mb-1(data-feather="arrow-up")
+							.col-6.col-md-12.col-xl-7
+								.mt-md-3.mt-xl-0(id="apexChart1")
+			.col-md-4.px-1
+				.card
+					.card-body
+						.d-flex.justify-content-between.align-items-baseline
+							h6.card-title.mb-0 New Customers
+							.dropdown.mb-2
+								button.btn.p-0(type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+									i.icon-lg.text-muted.pb-3px(data-feather="more-horizontal")
+								.dropdown-menu(aria-labelledby="dropdownMenuButton")
+									a.dropdown-item.d-flex.align-items-center(href="")
+										i.icon-sm.mr-2(data-feather="eye")
+										span(class="")
+						.row
+							.col-6.col-md-12.col-xl-5
+								h4.mb-2 123123
+								.d-flex.align-items-baseline
+									p.text-success
+										span +3.3%
+										i.icon-sm.mb-1(data-feather="arrow-up")
+							.col-6.col-md-12.col-xl-7
+								.mt-md-3.mt-xl-0(id="apexChart1")

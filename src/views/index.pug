@@ -1,16 +1,19 @@
 doctype html
-- 
-  var x = app.appTheme
-html(class="theme-" + x)
 
-  include ../partials/_head.pug
+html
 
-  body
-    include ../partials/_header-navbar.pug
+	include ../partials/_head.pug
 
+	body(class="theme-" + app.appTheme)
+		.main-wrapper
+			include ../partials/_main-sidebar.pug
 
-    include ../partials/_main-content.pug
+			.page-wrapper
 
+				include ../partials/_header-navbar.pug
 
-    include ../partials/_footer.pug
+				.page-content
 
+					include ../partials/_main-content.pug
+
+				include ../partials/_footer.pug

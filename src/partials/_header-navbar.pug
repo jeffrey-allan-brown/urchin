@@ -1,100 +1,45 @@
-nav(class="navbar navbar-expand-lg navbar-light bg-light")
-    a(class="navbar-brand" href="#")
-        img(src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="")/ #{personal.companyName} 
-
-    button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
-        span(class="navbar-toggler-icon")
-    
-    .collapse.navbar-collapse(id="navbarSupportedContent")
-        ul(class="navbar-nav mr-auto")
-            li(class="nav-item")
-                a(class="nav-link text-dark" href="#")
-                    i(data-feather="layout")
-            li(class="nav-item")
-                a(class="nav-link" href="#")
-                    i(data-feather="check-square")
-            li(class="nav-item")
-                a(class="nav-link" href="#")
-                    i(data-feather="calendar")
-            li(class="nav-item")
-                a(class="nav-link" href="#")
-                    i(data-feather="mail")
-            li(class="nav-item")
-                a(class="nav-link" href="#")
-                    i(data-feather="message-square")
-            li(class="nav-item")
-                a(class="nav-link" href="#")
-                    i(data-feather="search")
-            li(class="nav-item")
-                a(class="nav-link" href="#")
-                    i(data-feather="star")
-            li(class="nav-item")
-
-            li(class="nav-item dropdown")
-                a(class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Dropdown
-            
-
-    
-
-
-        form(class="form-inline my-2 my-lg-0")
-            input(class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search")
-            button(class="btn btn-outline-success my-2 my-sm-0" type="submit") Search
-
-
-
-
-nav(class="navbar header-nav navbar-expand-md")
-    button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation")
-        span(class="navbar-toggler-icon")
-    .container-fluid.collapse.navbar-collapse#navbarsExampleDefault
+nav(class="navbar")
+    .container-fluid
         .row.w-100.m-0
-            .col-xl-1.col-lg-1.col-md-2.col-sm-2.col-xs-2.pt-1
-                a(href="#" class="navbar-brand d-flex align-items-center")
-                    strong #{personal.companyName} 
-            .col-3.pt-1.collapse.navbar-collapse
+            .col-4.pt-1
                 ul(class="navbar-nav mr-auto")
-                    li(class="nav-item")
-                        button(class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#")
-                            a(class="nav-link text-dark" href="#")
-                                i(data-feather="layout")
-                    li(class="nav-item")
+                    li(class="nav-item d-none d-md-flex")
                         a(class="nav-link" href="#")
                             i(data-feather="check-square")
-                    li(class="nav-item")
+                    li(class="nav-item d-none d-md-flex")
                         a(class="nav-link" href="#")
                             i(data-feather="calendar")
-                    li(class="nav-item")
+                    li(class="nav-item d-none d-md-flex")
                         a(class="nav-link" href="#")
                             i(data-feather="mail")
-                    li(class="nav-item")
+                    li(class="nav-item d-none d-md-flex")
                         a(class="nav-link" href="#")
                             i(data-feather="message-square")
-                    li(class="nav-item")
+                    li(class="nav-item d-none d-md-flex")
                         a(class="nav-link" href="#")
                             i(data-feather="search")
-                    li(class="nav-item")
+                    li(class="nav-item d-none d-md-flex")
                         a(class="nav-link" href="#")
                             i(data-feather="star")
-            .col-4.pt-1.collapse.navbar-collapse
+            .col-4.pt-1
                 ul(class="navbar-nav mr-auto justify-content-center")
-                    li(class="nav-item")
+                    li(class="nav-item d-sm-none d-md-flex")
                         a(class="navbar-brand" href="#")
-            .col-4.pt-1.collapse.navbar-collapse
-                ul(class="navbar-nav ml-auto float-right")
-                    li(class="nav-item")
+            .col-4.pt-1
+                ul(class="navbar-nav mr-auto float-right")
+                    li(class="nav-item d-none d-md-flex")
                         a(class="nav-link" href="#")
                             i(data-feather="flag")
-                    li(class="nav-item")
+                    li(class="nav-item d-none d-md-flex")
                         a(class="nav-link" href="#")
                             i(data-feather="bell")
-                    li(class="nav-item")
+                    li(class="nav-item d-none d-md-flex")
                         a(class="nav-link" href="#")
                             i(data-feather="maximize")
                     li(class="nav-item")
                         a(class="nav-link" href="#")
                             i(data-feather="grid")
-                    li(class="nav-item")
+                    li(class="nav-item d-none d-md-flex")
                         a(class="nav-link" href="#")
                             i(data-feather="settings")
                     li(class="nav-item")

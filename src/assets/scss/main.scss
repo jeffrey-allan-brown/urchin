@@ -14,14 +14,12 @@
 // Theme Config //
 @import './config/colors';
 @import './config/variables';
-@import './fonts/roboto';
 
 @import './core/core';
 
 //----------------------
 // Main Layout Styles //
-@import "./layout/container";
-@import "./layout/header-navbar";
+@import "./layout/main-container";
 @import "./layout/main-navbar";
 @import "./layout/main-sidebar";
 @import "./layout/side-overlay";
