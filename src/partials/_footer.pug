@@ -1,11 +1,13 @@
-footer(class="footer")
+footer(class="py-3 mt-auto")
   div(class="container-fluid p-3 p-md-5")
-    div(class="row")
-      div(class="col-md-6") 2020 © #{personal.firstName} #{personal.lastName} - #{personal.website}
-      div(class="col-md-6")
-        div(class="text-md-right footer-links d-none d-md-block")
-          a.p-3(href="javascript: void(0);") About
-          a.p-3(href="javascript: void(0);") Support
-          a.p-3(href="javascript: void(0);") Contact Us
+    div(class="d-flex align-items-center justify-content-between small")
+      div(class="text-muted") 2020 © #{personal.firstName} #{personal.lastName} - #{personal.website}
+      div
+        a(href="#") Privacy Policy
+        |&nbsp;.&nbsp;
+        a(href="#") Terms &amp; Conditions
+
+
 script(src="./assets/fonts/feather-icons/dist/feather.js")
 script(src="./assets/js/core.min.js")
+
