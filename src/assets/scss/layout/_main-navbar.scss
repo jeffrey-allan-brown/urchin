@@ -1,7 +1,7 @@
 .navbar {
 
   @include themify($themes) {
-    background-color: themed('light') !important;
+    background-color: themed('light');
     color: themed('dark') !important;
     box-shadow: 0 2px 6px -2px rgba(0,0,0,.06),0 2px 6px 0 rgba(0,0,0,.02);
     padding: $topnav-base-padding;
@@ -20,15 +20,18 @@
     .nav-item {
       padding: 0px 10px;
 
-      .nav-link {
-        @include themify($themes) {
-          color: themed('dark') !important;;
+      @include themify($themes) {
+        .nav-link {
+          color: themed('dark');
+          :hover {
+            color: themed('primary')!important;
+          }
         }
-
+        
+        
       }
 
     }
-
   }
 
   .container-fluid {

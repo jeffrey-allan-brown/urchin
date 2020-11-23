@@ -10,9 +10,9 @@
     background-color: themed('light') !important;
   }
 
-    .sidebar-closed & {
-      transform: translateX(-$sidebar-base-width + 70);
-    }
+  .sidebar-closed & {
+    transform: translateX(-$sidebar-base-width + 70);
+  }
 
   .sidebar-header {
     height: $topnav-base-height;
@@ -43,6 +43,10 @@
       span {
         color: theme-color(dark);
         font-weight: 300;
+      }
+
+      &:hover {
+        text-decoration: none !important;
       }
 
     }
@@ -368,6 +372,7 @@
 
           &[aria-expanded="true"] {
             color: theme-color(primary);
+            height: 25px;
             .link-arrow {
               -webkit-transform: rotate(90deg);
               transform: rotate(180deg);
@@ -395,7 +400,7 @@
 
           .nav-link {
             color: theme-color(primary);
-
+            
             .link-title {
               margin-left: 0px;
             }
@@ -412,6 +417,7 @@
         &.active {
 
           .nav-link {
+            height: 25px;
 
             .disabled a {
               color: theme-color(light);
@@ -442,12 +448,14 @@
       &.sub-menu {
         padding: 0 0 5px 40px;
         display: block;
+        -webkit-transition: all .7s ease-in-out;
+        -webkit-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
 
         .nav-item {
           position: relative;
 
           .nav-link {
-            height: 25px;
             color: theme-color(dark);
             font-size: 13px;
             -webkit-transition: all .3s ease-in-out;
