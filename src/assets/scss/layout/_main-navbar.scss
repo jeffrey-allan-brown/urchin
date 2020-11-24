@@ -1,0 +1,41 @@
+.navbar {
+
+  @include themify($themes) {
+    background-color: themed('light');
+    color: themed('dark') !important;
+    box-shadow: 0 2px 6px -2px rgba(0,0,0,.06),0 2px 6px 0 rgba(0,0,0,.02);
+    padding: $topnav-base-padding;
+    height: $topnav-base-height;
+    left: 0;
+    right: 0;
+    top:0;
+    z-index: 1001;
+    box-shadow: 3px 0 10px 0 rgba(183, 192, 206, 0.2);
+    transition: width .1s ease, left .1s ease;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+
+    .nav-item {
+      padding: 0px 10px;
+
+      @include themify($themes) {
+        .nav-link {
+          color: themed('dark');
+          :hover {
+            color: themed('primary')!important;
+          }
+        }
+        
+        
+      }
+
+    }
+  }
+
+  .container-fluid {
+    padding:0px;
+  }
+  
+}

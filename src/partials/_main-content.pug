@@ -16,13 +16,13 @@
 .row
 	.col-12.col-xl-12.stretch-card
 		.row.flex-grow
-			.col-md-4.grid-margin.stretch-card
+			.col-md-4.px-1.grid-margin
 				.card
 					.card-body
 						.d-flex.justify-content-between.align-items-baseline
 							h6.card-title.mb-0 New Customers
 							.dropdown.mb-2
-								button.btn.p-0(type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+								button.btn.p-0.dashboard-card-dropdown(type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
 									i.icon-lg.text-muted.pb-3px(data-feather="more-horizontal")
 								.dropdown-menu(aria-labelledby="dropdownMenuButton")
 									a.dropdown-item.d-flex.align-items-center(href="")
@@ -37,14 +37,14 @@
 										i.icon-sm.mb-1(data-feather="arrow-up")
 							.col-6.col-md-12.col-xl-7
 								.mt-md-3.mt-xl-0(id="apexChart1")
-			.col-md-4.grid-margin.stretch-card
+			.col-md-4.px-1.grid-margin
 				.card
 					.card-body
 						.d-flex.justify-content-between.align-items-baseline
 							h6.card-title.mb-0 New Customers
 							.dropdown.mb-2
 								button.btn.p-0(type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
-									i.icon-lg.text-muted.pb-3px(data-feather="more-horizontal")
+									i.icon-lg.text-muted.pb-3px(data-feather="menu")
 								.dropdown-menu(aria-labelledby="dropdownMenuButton")
 									a.dropdown-item.d-flex.align-items-center(href="")
 										i.icon-sm.mr-2(data-feather="eye")
@@ -58,18 +58,18 @@
 										i.icon-sm.mb-1(data-feather="arrow-up")
 							.col-6.col-md-12.col-xl-7
 								.mt-md-3.mt-xl-0(id="apexChart1")
-			.col-md-4.grid-margin.stretch-card
+			.col-md-4.px-1.grid-margin
 				.card
 					.card-body
 						.d-flex.justify-content-between.align-items-baseline
 							h6.card-title.mb-0 New Customers
 							.dropdown.mb-2
 								button.btn.p-0(type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
-									i.icon-lg.text-muted.pb-3px(data-feather="more-horizontal")
+									i.icon-lg.text-muted.pb-3px(data-feather="settings")
 								.dropdown-menu(aria-labelledby="dropdownMenuButton")
 									a.dropdown-item.d-flex.align-items-center(href="")
 										i.icon-sm.mr-2(data-feather="eye")
-										span(class="")
+										span(class="Test")
 						.row
 							.col-6.col-md-12.col-xl-5
 								h4.mb-2 123123
@@ -79,3 +79,100 @@
 										i.icon-sm.mb-1(data-feather="arrow-up")
 							.col-6.col-md-12.col-xl-7
 								.mt-md-3.mt-xl-0(id="apexChart1")
+		.row.flex-grow
+			.col-lg-12.px-1.grid-margin
+				.card
+					.card-body
+						.d-flex.justify-content-between.align-items-baseline.mb-2
+							h6.card-title.mb-0
+							.dropdown.mb-2
+								button.btn.p-0(type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+									i.icon-lg.text-muted.pb-3px(data-feather="sliders")
+								.dropdown-menu(aria-labelledby="dropdownMenuButton")
+									a.dropdown-item.d-flex.align-items-center(href="")
+										i.icon-sm.mr-2(data-feather="eye")
+										span(class="Test")
+						.table-responsive
+							table.table.table-hover.mb-0
+								thead
+									tr
+										th.pt-0 #
+										th.pt-0 Project Name
+										th.pt-0 Start Date
+										th.pt-0 End Date
+										th.pt-0 Due Date
+										th.pt-0 Status
+										th.pt-0 Owner
+								tbody
+									tr
+										td 1
+										td Test
+										td date
+										td date
+										td date
+										td
+											span.badge.badge-primary Released
+										td Test
+									tr
+										td 1
+										td Test
+										td date
+										td date
+										td date
+										td
+											span.badge.badge-secondary Released
+										td Test
+									tr
+										td 1
+										td Test
+										td date
+										td date
+										td date
+										td
+											span.badge.badge-tertiary Released
+										td Test
+									tr
+										td 1
+										td Test
+										td date
+										td date
+										td date
+										td
+											span.badge.badge-light Released
+										td Test
+									tr
+										td 1
+										td Test
+										td date
+										td date
+										td date
+										td
+											span.badge.badge-dark Released
+										td Test
+									tr
+										td 1
+										td Test
+										td date
+										td date
+										td date
+										td
+											span.badge.badge-danger Released
+										td Test
+									tr
+										td 1
+										td Test
+										td date
+										td date
+										td date
+										td
+											span.badge.badge-info Released
+										td Test
+									tr
+										td 1
+										td Test
+										td date
+										td date
+										td date
+										td
+											span.badge.badge-success Released
+										td Test

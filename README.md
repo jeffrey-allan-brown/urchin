@@ -39,7 +39,7 @@ Styling                             | SASS
 ## :inbox_tray: Quick Start
 
 To get started, first go to the `config.json` file and edit the configuration objects, adding your personal information and application build preferences.
-Then, run the setup script from the root directory.
+Then, run the setup script from the root directory to build the application.
 
 ```
 npm run setup

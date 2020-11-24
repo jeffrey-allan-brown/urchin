@@ -1,79 +1,5 @@
-.main-wrapper {
-  overflow: hidden;
-}
-.navbar {
-  @include themify($themes) {
-    background-color: themed('light') !important;
-    color: themed('dark') !important;
-    box-shadow: 0 2px 6px -2px rgba(0,0,0,.06),0 2px 6px 0 rgba(0,0,0,.02);
-    padding: $topnav-base-padding;
-    height: $topnav-base-height;
-    left: 0;
-    right: 0;
-    top:0;
-    z-index: 1001;
-    box-shadow: 3px 0 10px 0 rgba(183, 192, 206, 0.2);
-    transition: width .1s ease, left .1s ease;
-  }
-
-  .navbar-nav {
-    flex-direction: row;
-
-    .nav-item {
-      padding: 0px 5px;
-
-      .nav-link {
-        @include themify($themes) {
-          color: themed('dark') !important;;
-      }
-
-      }
-    }
-  }
-
-  .container-fluid {
-    padding:0px;
-  }
-}
-
-  .main-content {
-    padding-top: $topnav-base-height;
-  }
-
-  .main-wrapper .page-wrapper {
-    min-height: 100vh;
-    background: $content-bg;
-    width: calc(100% - $sidebar-base-width);
-    display: -webkit-flex;
-    margin-left: $sidebar-base-width;
-    display: flex;
-    -webkit-flex-direction: column;
-    flex-direction: column;
-    -webkit-transition: margin .1s ease, width .1s ease;
-    transition: margin .1s ease, width .1s ease;
-
-  }
-.main-wrapper .page-wrapper .page-content {
-    flex-grow: 1;
-    padding: 5px 25px;
-}
-
-.sidebar-closed {
-  transition: .4s;
-  .page-wrapper {
-    margin-left: #{$sidebar-closed-width};
-    .navbar {
-      left: 0;
-      right: 0;
-    }
-  }
-}
-
-
-
-
 .datepicker {
-  > div {
+  div {
     display: initial;
     padding: 0.375rem 0.75rem;
     margin-bottom: 0;
@@ -143,25 +69,6 @@
   }
 }
 
-#flotChart1 {
-  height: 350px;
-  @media(max-width: 767px) {
-    height: 200px;
-  }
-}
-#progressbar1 {
-  width: 200px;
-  height: 200px;
-  position: relative;
-  svg {
-    height: 200px;
-    width: 200px;
-    fill: none;
-    stroke-width: 10;
-    stroke-linecap: round;
-  }
-}
-
 .monthly-sales-chart-wrapper {
   height: 270px;
   @media(max-width: 767px) {
@@ -170,5 +77,5 @@
 }
 
 .grid-margin {
-  margin-bottom: 20px;
+    margin-bottom: 1.5rem;
 }

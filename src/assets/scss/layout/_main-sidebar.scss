@@ -5,17 +5,14 @@
   position: fixed;
   left: 0;
   top:0;
+
   @include themify($themes) {
     background-color: themed('light') !important;
   }
 
-    .sidebar-closed & {
-      transform: translateX(-$sidebar-base-width + 70);
-      
-      .sidebar-brand {
-        opacity: 0;
-      }
-    }
+  .sidebar-closed & {
+    transform: translateX(-$sidebar-base-width + 70);
+  }
 
   .sidebar-header {
     height: $topnav-base-height;
@@ -32,8 +29,6 @@
     -webkit-transition: width .1s ease;
     transition: width .1s ease;
 
-
-  
     .sidebar-brand {
       opacity: 1;
       visibility: visible;
@@ -44,11 +39,18 @@
       line-height: 19px;
       letter-spacing: -1px;
       color: theme-color(dark);
+
       span {
         color: theme-color(dark);
         font-weight: 300;
       }
+
+      &:hover {
+        text-decoration: none !important;
+      }
+
     }
+
     .sidebar-toggler {
       cursor: pointer;
       width: 18px;
@@ -295,6 +297,22 @@
     }
   }
 }
+
+.sidebar-closed {
+  transition: .4s;
+
+  .page-wrapper {
+    margin-left: #{$sidebar-closed-width};
+
+    .navbar {
+      left: 0;
+      right: 0;
+    }
+
+  }
+
+}
+
 .sidebar-body {
     max-height: calc(100% - #{$topnav-base-height});
     position: relative;
@@ -305,11 +323,14 @@
     
     .nav {
       padding: 25px 10px 50px 15px;
+
       .nav-item {
         position: relative;
+
         .disabled {
           color: #dee2e6 !important;
         }
+
         .nav-link {
           display: -webkit-flex;
           display: flex;
@@ -325,11 +346,13 @@
             position: absolute;
             color: inherit;
           }
+
           .link-title {
             font-size: 14px;
             -webkit-transition: all .2s ease-in-out;
             transition: all .2s ease-in-out;
           }
+
           .link-arrow {
             width: 14px;
             height: 24px;
@@ -339,20 +362,26 @@
             transition: all .3s ease-in-out;
             color: inherit;
           }
+
           .link-icon,
           .link-title,
           .link-arrow {
             -webkit-transition: all .3s ease;
             transition: all .3s ease;
           }
+
           &[aria-expanded="true"] {
             color: theme-color(primary);
+            height: 25px;
             .link-arrow {
               -webkit-transform: rotate(90deg);
               transform: rotate(180deg);
             }
+
           }
+
         }
+
         &.nav-category {
           color: $text-muted;
           font-size: 11px;
@@ -364,25 +393,38 @@
           &:not(:first-child) {
             margin-top: 20px;
           }
+
         }
+
         &:hover {
+
           .nav-link {
             color: theme-color(primary);
+            
             .link-title {
               margin-left: 0px;
             }
+
             .link-icon {
               color: theme-color(primary);
               fill: rgba(239, 243, 255, .5);
             }
+
           }
+
         }
+
         &.active {
+
           .nav-link {
+            height: 25px;
+
             .disabled a {
               color: theme-color(light);
             }
+
             color: theme-color(primary);
+
             &::before {
               content: '';
               width: 3px;
@@ -391,20 +433,29 @@
               position: absolute;
               left: -25px;
             }
+
             .link-icon {
               fill: rgba(239, 243, 255, .5);
               color: theme-color(primary);
             }
+
           }
+
         }
+
       }
+
       &.sub-menu {
         padding: 0 0 5px 40px;
         display: block;
+        -webkit-transition: all .7s ease-in-out;
+        -webkit-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+
         .nav-item {
           position: relative;
+
           .nav-link {
-            height: 25px;
             color: theme-color(dark);
             font-size: 13px;
             -webkit-transition: all .3s ease-in-out;
@@ -423,25 +474,37 @@
               -webkit-transition: all .4s ease-in-out;
               transition: all .4s ease-in-out;
             }
+
             &.active {
               color: theme-color(primary);
               &::before {
               border: 1px solid theme-color(primary);
               background: theme-color(primary);       
               }
+
             }
+
           }
+
           &:hover {
+
             .nav-link {
               color: theme-color(primary);
               margin-left: 3px;
+
               &::before {
                 border: 1px solid theme-color(primary);
                 background: theme-color(primary);       
               }
+
             }
+
           }
+
         }
+
       }
+
     }
+    
   }
