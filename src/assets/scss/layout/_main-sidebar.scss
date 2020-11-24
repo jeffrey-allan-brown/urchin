@@ -11,6 +11,10 @@
 
     .sidebar-closed & {
       transform: translateX(-$sidebar-base-width + 70);
+      
+      .sidebar-brand {
+        opacity: 0;
+      }
     }
 
   .sidebar-header {
