@@ -11,7 +11,7 @@
   }
 
   .sidebar-closed & {
-    transform: translateX(-$sidebar-base-width + 70);
+    width: 70px;
   }
 
   .sidebar-header {
@@ -39,14 +39,14 @@
       line-height: 19px;
       letter-spacing: -1px;
       color: theme-color(dark);
-
-      span {
-        color: theme-color(dark);
-        font-weight: 300;
-      }
+      max-width: 10rem;
 
       &:hover {
         text-decoration: none !important;
+      }
+
+      .sidebar-closed & {
+        display: none !important
       }
 
     }
@@ -54,12 +54,13 @@
     .sidebar-toggler {
       cursor: pointer;
       width: 18px;
+
       span {
         display: block;
         width: 100%;
         border-radius: 3px;
         height: 2px;
-        background: #535353;
+        background-color: #000000;
         -webkit-transition: all .3s;
         transition: all .3s;
         position: relative;
@@ -301,9 +302,21 @@
 .sidebar-closed {
   transition: .4s;
 
-  .page-wrapper {
-    margin-left: #{$sidebar-closed-width};
+  .sidebar {
 
+    .sidebar-body {
+
+      .link-title, .link-arrow {
+        visibility: hidden;
+        transition: none;
+      }
+
+    }
+
+  }
+
+  .page-wrapper {
+    
     .navbar {
       left: 0;
       right: 0;
@@ -349,25 +362,18 @@
 
           .link-title {
             font-size: 14px;
-            -webkit-transition: all .2s ease-in-out;
-            transition: all .2s ease-in-out;
           }
 
           .link-arrow {
             width: 14px;
             height: 24px;
             margin-left: auto;
-            -webkit-transition: all .3s ease;
-            -webkit-transition: all .3s ease-in-out;
-            transition: all .3s ease-in-out;
             color: inherit;
           }
 
           .link-icon,
           .link-title,
           .link-arrow {
-            -webkit-transition: all .3s ease;
-            transition: all .3s ease;
           }
 
           &[aria-expanded="true"] {

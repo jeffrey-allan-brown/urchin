@@ -1,5 +1,5 @@
-nav(class="d-md-block sidebar")
-	.sidebar-header
+nav.sidebar.d-none.d-sm-block
+	.sidebar-header.d-none.d-sm-flex
 		a(href="#" class="sidebar-brand")
 			| #{personal.companyName} 
 		.sidebar-toggler.not-active
@@ -10,7 +10,7 @@ nav(class="d-md-block sidebar")
 		ul(class="nav flex-column")
 			li(class="nav-item")
 				a(class="nav-link disabled" data-toggle="collapse" href="#dashboards" role="button" aria-expanded="false" aria-controls="dashboards")
-					i(class="mr-4" data-feather="layers")
+					i(class="mr-4 ml-2" data-feather="layers")
 					span.link-title 
 						| Dashboards
 					i(class="link-arrow" data-feather="chevron-down")
@@ -20,8 +20,8 @@ nav(class="d-md-block sidebar")
 							a.nav-link(href="#") Main
 			li(class="nav-item")
 				a(class="nav-link disabled" data-toggle="collapse" href="#applications" role="button" aria-expanded="false" aria-controls="applications")
-					i(class="mr-4" data-feather="layers")
-					span.link-title 
+					i(class="mr-4 ml-2" data-feather="layers")
+					span.link-title
 						| Applications
 					i(class="link-arrow" data-feather="chevron-down")
 				.collapse(id="applications")
@@ -34,7 +34,7 @@ nav(class="d-md-block sidebar")
 							a.nav-link(href="#") Calendar
 			li(class="nav-item")
 				a(class="nav-link disabled" data-toggle="collapse" href="#themes" role="button" aria-expanded="false" aria-controls="themes")
-					i(class="mr-4" data-feather="layers")
+					i(class="mr-4 ml-2" data-feather="layers")
 					span.link-title 
 						| Themes
 					i(class="link-arrow" data-feather="chevron-down")
@@ -48,7 +48,7 @@ nav(class="d-md-block sidebar")
 							a.nav-link(href="#") Regal
 			li(class="nav-item")
 				a(class="nav-link" data-toggle="collapse" href="#uiElements" role="button" aria-expanded="false" aria-controls="uiElements")
-					i(class="mr-4" data-feather="feather")
+					i(class="mr-4 ml-2" data-feather="feather")
 					span.link-title 
 						| UI Elements
 					i(class="link-arrow" data-feather="chevron-down")
@@ -58,7 +58,7 @@ nav(class="d-md-block sidebar")
 							a.nav-link(href="#") Alerts
 			li(class="nav-item")
 				a(class="nav-link disabled" data-toggle="collapse" href="#icons" role="button" aria-expanded="false" aria-controls="icons")
-					i(class="mr-4" data-feather="smile")
+					i(class="mr-4 ml-2" data-feather="smile")
 					span.link-title 
 						| Icons
 					i(class="link-arrow" data-feather="chevron-down")
@@ -68,7 +68,7 @@ nav(class="d-md-block sidebar")
 							a.nav-link(href="#") Icons
 			li(class="nav-item")
 				a(class="nav-link disabled" data-toggle="collapse" href="#components" role="button" aria-expanded="false" aria-controls="components")
-					i(class="mr-4" data-feather="layers")
+					i(class="mr-4 ml-2" data-feather="layers")
 					span.link-title 
 						| Components
 					i(class="link-arrow" data-feather="chevron-down")
@@ -78,7 +78,7 @@ nav(class="d-md-block sidebar")
 							a.nav-link(href="#") 1
 			li(class="nav-item")
 				a(class="nav-link disabled" data-toggle="collapse" href="#forms" role="button" aria-expanded="false" aria-controls="forms")
-					i(class="mr-4" data-feather="inbox")
+					i(class="mr-4 ml-2" data-feather="inbox")
 					span.link-title 
 						| Forms
 					i(class="link-arrow" data-feather="chevron-down")
@@ -88,7 +88,7 @@ nav(class="d-md-block sidebar")
 							a.nav-link(href="#") 1
 			li(class="nav-item")
 				a(class="nav-link disabled" data-toggle="collapse" href="#tables" role="button" aria-expanded="false" aria-controls="tables")
-					i(class="mr-4" data-feather="layout")
+					i(class="mr-4 ml-2" data-feather="layout")
 					span.link-title 
 						| Tables
 					i(class="link-arrow" data-feather="chevron-down")
@@ -98,7 +98,7 @@ nav(class="d-md-block sidebar")
 							a.nav-link(href="#") 1
 			li(class="nav-item")
 				a(class="nav-link disabled" data-toggle="collapse" href="#charts" role="button" aria-expanded="false" aria-controls="charts")
-					i(class="mr-4" data-feather="pie-chart")
+					i(class="mr-4 ml-2" data-feather="pie-chart")
 					span.link-title 
 						| Charts
 					i(class="link-arrow" data-feather="chevron-down")
@@ -108,7 +108,7 @@ nav(class="d-md-block sidebar")
 							a.nav-link(href="#") 1
 			li(class="nav-item")
 				a(class="nav-link disabled" data-toggle="collapse" href="#pages" role="button" aria-expanded="false" aria-controls="pages")
-					i(class="mr-4" data-feather="layers")
+					i(class="mr-4 ml-2" data-feather="layers")
 					span.link-title 
 						| Pages
 					i(class="link-arrow" data-feather="chevron-down")
@@ -118,7 +118,7 @@ nav(class="d-md-block sidebar")
 							a.nav-link(href="#") 1
 			li(class="nav-item")
 				a(class="nav-link disabled" data-toggle="collapse" href="#authentication" role="button" aria-expanded="false" aria-controls="authentication")
-					i(class="mr-4" data-feather="layers")
+					i(class="mr-4 ml-2" data-feather="layers")
 					span.link-title 
 						| Auth
 					i(class="link-arrow" data-feather="chevron-down")
