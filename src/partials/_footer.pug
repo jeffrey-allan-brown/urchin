@@ -14,14 +14,30 @@ script.
     var mainWrapper = document.querySelector('.main-wrapper');
     var toggleBtn = document.querySelector('.sidebar-toggler');
     var sidebar = document.querySelector('.sidebar');
+    var sidebarBody = document.querySelector('.sidebar-body');
 
   	toggleBtn.addEventListener('click', function() {
-      if(mainWrapper.className == "main-wrapper") {
+      if(mainWrapper.className == "main-wrapper sidebar-open") {
         toggleBtn.className = "sidebar-toggler active";
         mainWrapper.className="main-wrapper sidebar-closed"
       }
       else {
         toggleBtn.className = "sidebar-toggler not-active"
-        mainWrapper.className="main-wrapper"
+        mainWrapper.className="main-wrapper sidebar-open"
       }
-    })
+    });
+
+    //  open sidebar-folded when hover
+    $(sidebarBody).hover(
+    function () {
+      console.log("hover");
+      if ($('.main-wrapper').hasClass('sidebar-closed')){
+        ($('.main-wrapper')).addClass("open-sidebar-closed");
+      }
+    },
+    function () {
+      console.log("not hover");
+      if ($('.main-wrapper').hasClass('sidebar-closed')){
+        ($('.main-wrapper')).removeClass("open-sidebar-closed");
+      }
+    });

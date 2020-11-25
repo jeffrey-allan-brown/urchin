@@ -5,12 +5,13 @@
   position: fixed;
   left: 0;
   top:0;
+  z-index: 10;
 
   @include themify($themes) {
     background-color: themed('light') !important;
   }
 
-  .sidebar-closed & {
+  .sidebar-closed:not(.open-sidebar-closed) & {
     width: 70px;
   }
   
@@ -302,16 +303,16 @@
 .sidebar-closed {
   transition: .4s;
 
-  .sidebar {
-
-    .sidebar-body {
+  &:not(.open-sidebar-closed) .sidebar .sidebar-body {
 
       .link-title, .link-arrow {
         visibility: hidden;
         transition: none;
       }
-
-    }
+      .sub-menu {
+        display: none;
+        visibility: hidden;
+      }
 
   }
 
@@ -378,7 +379,6 @@
 
           &[aria-expanded="true"] {
             color: theme-color(primary);
-            height: 25px;
             .link-arrow {
               -webkit-transform: rotate(90deg);
               transform: rotate(180deg);
