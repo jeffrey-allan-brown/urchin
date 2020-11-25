@@ -111,7 +111,7 @@ gulp.task('buildThemeFonts', () => {
     .pipe(gulp.dest('./dist/assets/fonts'));
 });
 gulp.task('buildThemeImages', () => {
-    return gulp.src(['./src/assets/images/**'])
+    return gulp.src(['./src/assets/images/**','./src/assets/images/*.png'])
     .pipe(gulp.dest('./dist/assets/images'));
 });
 

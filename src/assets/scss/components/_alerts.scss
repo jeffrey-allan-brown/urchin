@@ -5,6 +5,16 @@
     border: none;
     border-radius: .1rem;
 
+    button .close {
+        float: right;
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1;
+        color: #004085;
+        text-shadow: 0 1px 0 #fff;
+        opacity: .6;
+    }
+
     @include themify($themes) {
     	.alert-primary {
 	    	color: ;

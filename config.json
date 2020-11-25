@@ -8,7 +8,7 @@
     "website": "https://website.com"
   },
   "app": {
-    "appTheme": "default",
+    "appTheme": "locksmith",
     "direction": "ltr",
     "layoutStyle": "horizontalNavigation", 
     "glossary": {
