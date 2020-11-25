@@ -1,0 +1,36 @@
+doctype html
+
+html
+
+	include ../../partials/_head.pug
+
+	body(class="theme-" + app.appTheme)
+		.main-wrapper
+			include ../../partials/_main-sidebar.pug
+
+			.page-wrapper
+
+				include ../../partials/_header-navbar.pug
+
+				.page-content
+
+					.d-flex.justify-content-between.align-items-center.flex-wrap.my-3
+						div.col-md-12
+							h1.mb-3 Themes
+							p.lead Currently there are five themes to choose from when building your app, which you specify in the config.json file before you run Gulp.
+							p.lead Based on your build configuration, your current theme is &nbsp;
+								strong app.appTheme
+							hr
+						div.col-md-6.mb-3
+							.card
+								h5.card-title Theme: 
+								#{app.appTheme}
+								.card-body.d-flex.justify-content-between
+									
+									div.m-5.theme-palette.palette-primary Primary
+									div.m-5.theme-palette.palette-secondary Secondary
+									div.m-5.theme-palette.palette-tertiary Tertiary
+									div.m-5.theme-palette.palette-accent Accent
+									div.m-5.theme-palette.palette-shade Shade
+
+				include ../../partials/_footer.pug

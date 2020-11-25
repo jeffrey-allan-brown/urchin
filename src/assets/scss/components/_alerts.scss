@@ -17,21 +17,21 @@
 
     @include themify($themes) {
     	.alert-primary {
-	    	color: ;
-	    	background-color: ;
-	    	border-color: ;
+	    	color: themed('primary') !important;
+	    	background-color: themed('primary') !important;
+	    	border-color: themed('primary') !important;
     	}
 
     	.alert-fill-primary {
-	    	color: ;
-	    	background-color: ;
-	    	border-color: ;
+	    	color: #ffffff !important;
+	    	background-color: themed('primary') !important;
+	    	border-color: themed('primary') !important;
     	}
 
     	.alert-icon-primary {
-	    	color: ;
-	    	background-color: ;
-	    	border-color: ;
+	    	color: themed('primary') !important;
+	    	background-color: themed('primary') !important;
+	    	border-color: themed('primary') !important;
     	}
   	}
 }

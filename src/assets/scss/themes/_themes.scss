@@ -1,0 +1,60 @@
+.theme-palette {
+	height: 15rem;
+	width: 15rem;
+}
+
+.palette-primary {
+
+	@include themify($themes) {
+	
+		background-color: themed('primary') !important;
+		color: #ffffff !important;
+	
+	}
+
+}
+
+.palette-secondary {
+
+	@include themify($themes) {
+	
+		background-color: themed('secondary') !important;
+		color: #ffffff !important;
+	
+	}
+
+}
+
+.palette-tertiary {
+
+	@include themify($themes) {
+	
+		background-color: themed('tertiary') !important;
+		color: #ffffff !important;
+	
+	}
+
+}
+
+
+.palette-accent {
+
+	@include themify($themes) {
+	
+		background-color: themed('accent') !important;
+		color: #ffffff !important;
+	
+	}
+
+}
+
+.palette-shade {
+
+	@include themify($themes) {
+	
+		background-color: themed('shade') !important;
+		color: #ffffff !important;
+	
+	}
+
+}

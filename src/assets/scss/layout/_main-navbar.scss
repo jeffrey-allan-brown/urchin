@@ -21,7 +21,7 @@
       padding: 0px 10px;
 
       @include themify($themes) {
-        .nav-link {
+        .nav-link:not(.disabled) {
           color: themed('dark');
           :hover {
             color: themed('primary')!important;
@@ -29,10 +29,10 @@
           
         }
         
-        
       }
 
     }
+    
   }
 
   .container-fluid {

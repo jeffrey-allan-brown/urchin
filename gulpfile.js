@@ -146,9 +146,20 @@ gulp.task('buildComponentViews', function buildHTML() {
     .pipe(gulp.dest('./dist/pages'));
   });
 
+gulp.task('buildThemeViews', function buildHTML() {
+    return gulp.src([
+        './src/views/themes/themes.pug'
+        ])
+    .pipe(pug({
+      pretty: true,
+      data: config
+    }))
+    .pipe(gulp.dest('./dist/pages'));
+  });
 
 
-gulp.task('compileViews', series('buildCoreView','buildComponentViews'));
+
+gulp.task('compileViews', series('buildCoreView','buildComponentViews','buildThemeViews'));
 
 
 // Full Build //
