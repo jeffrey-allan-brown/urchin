@@ -1,0 +1,16 @@
+doctype html
+html
+	include ../../partials/_head.pug
+	body(class="theme-" + app.appTheme)
+		.main-wrapper
+			include ../../partials/_main-sidebar.pug
+			.page-wrapper
+				include ../../partials/_header-navbar.pug
+				.page-content
+					.d-flex.justify-content-between.align-items-center.flex-wrap.my-3
+						div.col-md-12
+							h1.mb-3 Button Groups
+							p.lead Group a series of buttons together on a single line with the button group, and super-power them with JavaScript.
+							hr
+						
+				include ../../partials/_footer.pug

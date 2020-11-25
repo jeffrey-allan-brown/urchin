@@ -1,0 +1,27 @@
+.alert {
+    position: relative;
+    padding: .6rem 1.25rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: .1rem;
+
+    @include themify($themes) {
+    	.alert-primary {
+	    	color: ;
+	    	background-color: ;
+	    	border-color: ;
+    	}
+
+    	.alert-fill-primary {
+	    	color: ;
+	    	background-color: ;
+	    	border-color: ;
+    	}
+
+    	.alert-icon-primary {
+	    	color: ;
+	    	background-color: ;
+	    	border-color: ;
+    	}
+  	}
+}

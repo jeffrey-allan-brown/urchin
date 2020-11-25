@@ -107,8 +107,8 @@ gulp.task('buildThemeCSS', () => {
     .pipe(gulp.dest('./dist/assets/css'));
 });
 gulp.task('buildThemeFonts', () => {
-    return gulp.src(['./src/assets/fonts/feather-icons/**'])
-    .pipe(gulp.dest('./dist/assets/fonts/feather-icons'));
+    return gulp.src(['./src/assets/fonts/**'])
+    .pipe(gulp.dest('./dist/assets/fonts'));
 });
 gulp.task('buildThemeImages', () => {
     return gulp.src(['./src/assets/images/**'])
@@ -133,7 +133,11 @@ gulp.task('buildCoreView', function buildHTML() {
 gulp.task('buildComponentViews', function buildHTML() {
     return gulp.src([
         './src/views/components/alerts.pug',
-        './src/views/components/badges.pug'
+        './src/views/components/badges.pug',
+        './src/views/components/breadcrumbs.pug',
+        './src/views/components/buttons.pug',
+        './src/views/components/button-groups.pug',
+        './src/views/components/cards.pug',
         ])
     .pipe(pug({
       pretty: true,

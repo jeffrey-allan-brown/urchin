@@ -1,5 +1,6 @@
 .sidebar {
   width: $sidebar-base-width;
+  font-family: 'Poppins', sans-serif;
   height: 100vh;
   transition: width .1s ease, left .1s ease;
   position: fixed;
@@ -460,6 +461,7 @@
 
         .nav-item {
           position: relative;
+          height: 2.5rem;
 
           .nav-link {
             color: theme-color(dark);
@@ -474,8 +476,8 @@
               background: transparent;
               border: 1px solid darken($border-color, 20%);
               position: absolute;
-              left: -29px;
-              top: 10px;
+              left: -1rem;
+              top: .45rem;
               -webkit-transition: all .7s ease-in-out;
               -webkit-transition: all .4s ease-in-out;
               transition: all .4s ease-in-out;
@@ -496,7 +498,6 @@
 
             .nav-link {
               color: theme-color(primary);
-              margin-left: 3px;
 
               &::before {
                 border: 1px solid theme-color(primary);
