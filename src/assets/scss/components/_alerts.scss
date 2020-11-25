@@ -4,6 +4,11 @@
     margin-bottom: 1rem;
     border: none;
     border-radius: .1rem;
+    @include themify($themes) {
+        color: themed('primary') !important;
+        background-color: themed('light') !important;
+        border-color: themed('primary') !important;
+    }
 
     button .close {
         float: right;
@@ -14,24 +19,5 @@
         text-shadow: 0 1px 0 #fff;
         opacity: .6;
     }
-
-    @include themify($themes) {
-    	.alert-primary {
-	    	color: themed('primary') !important;
-	    	background-color: themed('primary') !important;
-	    	border-color: themed('primary') !important;
-    	}
-
-    	.alert-fill-primary {
-	    	color: #ffffff !important;
-	    	background-color: themed('primary') !important;
-	    	border-color: themed('primary') !important;
-    	}
-
-    	.alert-icon-primary {
-	    	color: themed('primary') !important;
-	    	background-color: themed('primary') !important;
-	    	border-color: themed('primary') !important;
-    	}
-  	}
+    
 }
