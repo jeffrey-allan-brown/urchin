@@ -121,8 +121,17 @@ gulp.task('buildCoreFiles', series('buildCoreCSS','buildCoreJS','buildThemeCSS',
 // Compile Views //
 // ------------------------------
 
-gulp.task('compileViews', function buildHTML() {
+gulp.task('buildCoreView', function buildHTML() {
     return gulp.src('./src/views/index.pug')
+    .pipe(pug({
+      pretty: true,
+      data: config
+    }))
+    .pipe(gulp.dest('./dist'));
+  });
+
+gulp.task('buildComponentViews', function buildHTML() {
+    return gulp.src('./src/views/components/alerts.pug')
     .pipe(pug({
       pretty: true,
       data: config
@@ -132,7 +141,7 @@ gulp.task('compileViews', function buildHTML() {
 
 
 
-
+gulp.task('compileViews', series('buildCoreView','buildComponentViews'));
 
 
 // Full Build //
