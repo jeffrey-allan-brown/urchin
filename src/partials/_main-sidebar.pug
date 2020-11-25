@@ -9,18 +9,25 @@ nav.sidebar.d-none.d-sm-block
 	.sidebar-body
 		ul(class="nav flex-column")
 			li(class="nav-item")
-				a(class="nav-link" data-toggle="collapse" href="index.html" role="button" aria-expanded="false" aria-controls="dashboard")
-					i(class="mr-4 ml-2" data-feather="layers")
+				a(class="nav-link" href="index.html")
+					i(class="mr-4 ml-2" data-feather="compass")
 					span.link-title 
 						| Dashboard
+			li(class="nav-item")
+				a(class="nav-link" data-toggle="collapse" href="#uiElements" role="button" aria-expanded="false" aria-controls="uiElements")
+					i(class="mr-4 ml-2" data-feather="hard-drive")
+					span.link-title 
+						| UI Elements
 					i(class="link-arrow" data-feather="chevron-down")
-				.collapse(id="dashboards")
+				.collapse(id="uiElements")
 					ul.nav.sub-menu
 						li.nav-item
-							a.nav-link(href="#") Main
+							a.nav-link(href="alerts.html") Alerts
+						li.nav-item
+							a.nav-link(href="badges.html") Badges
 			li(class="nav-item")
 				a(class="nav-link disabled" data-toggle="collapse" href="#applications" role="button" aria-expanded="false" aria-controls="applications")
-					i(class="mr-4 ml-2" data-feather="layers")
+					i(class="mr-4 ml-2" data-feather="cpu")
 					span.link-title
 						| Applications
 					i(class="link-arrow" data-feather="chevron-down")
@@ -30,7 +37,7 @@ nav.sidebar.d-none.d-sm-block
 							a.nav-link(href="#") Email
 			li(class="nav-item")
 				a(class="nav-link disabled" data-toggle="collapse" href="#themes" role="button" aria-expanded="false" aria-controls="themes")
-					i(class="mr-4 ml-2" data-feather="layers")
+					i(class="mr-4 ml-2" data-feather="pen-tool")
 					span.link-title 
 						| Themes
 					i(class="link-arrow" data-feather="chevron-down")
@@ -42,21 +49,10 @@ nav.sidebar.d-none.d-sm-block
 							a.nav-link(href="#") Malaise
 						li.nav-item
 							a.nav-link(href="#") Regal
-			li(class="nav-item")
-				a(class="nav-link" data-toggle="collapse" href="#uiElements" role="button" aria-expanded="false" aria-controls="uiElements")
-					i(class="mr-4 ml-2" data-feather="feather")
-					span.link-title 
-						| UI Elements
-					i(class="link-arrow" data-feather="chevron-down")
-				.collapse(id="uiElements")
-					ul.nav.sub-menu
-						li.nav-item
-							a.nav-link(href="alerts.html") Alerts
-						li.nav-item
-							a.nav-link(href="badges.html") Badges
+			
 			li(class="nav-item")
 				a(class="nav-link disabled" data-toggle="collapse" href="#icons" role="button" aria-expanded="false" aria-controls="icons")
-					i(class="mr-4 ml-2" data-feather="smile")
+					i(class="mr-4 ml-2" data-feather="gift")
 					span.link-title 
 						| Icons
 					i(class="link-arrow" data-feather="chevron-down")
@@ -64,16 +60,6 @@ nav.sidebar.d-none.d-sm-block
 					ul.nav.sub-menu
 						li.nav-item
 							a.nav-link(href="#") Icons
-			li(class="nav-item")
-				a(class="nav-link disabled" data-toggle="collapse" href="#components" role="button" aria-expanded="false" aria-controls="components")
-					i(class="mr-4 ml-2" data-feather="layers")
-					span.link-title 
-						| Components
-					i(class="link-arrow" data-feather="chevron-down")
-				.collapse(id="components")
-					ul.nav.sub-menu
-						li.nav-item
-							a.nav-link(href="#") 1
 			li(class="nav-item")
 				a(class="nav-link disabled" data-toggle="collapse" href="#forms" role="button" aria-expanded="false" aria-controls="forms")
 					i(class="mr-4 ml-2" data-feather="inbox")
@@ -116,7 +102,7 @@ nav.sidebar.d-none.d-sm-block
 							a.nav-link(href="#") 1
 			li(class="nav-item")
 				a(class="nav-link disabled" data-toggle="collapse" href="#authentication" role="button" aria-expanded="false" aria-controls="authentication")
-					i(class="mr-4 ml-2" data-feather="layers")
+					i(class="mr-4 ml-2" data-feather="users")
 					span.link-title 
 						| Auth
 					i(class="link-arrow" data-feather="chevron-down")

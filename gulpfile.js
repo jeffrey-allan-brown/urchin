@@ -131,7 +131,10 @@ gulp.task('buildCoreView', function buildHTML() {
   });
 
 gulp.task('buildComponentViews', function buildHTML() {
-    return gulp.src('./src/views/components/alerts.pug')
+    return gulp.src([
+        './src/views/components/alerts.pug',
+        './src/views/components/badges.pug'
+        ])
     .pipe(pug({
       pretty: true,
       data: config

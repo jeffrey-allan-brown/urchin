@@ -63,6 +63,17 @@ html
 											p Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.
 											hr
 											p.mb-0 Whenever you need to, be sure to use margin utilities to keep things nice and tidy.
+						div.col-md-6.mb-3
+							div.card
+								div.card-body
+									h4.card-title Dismissing
+									p.mb-3 Using the alert JavaScript plugin, it’s possible to dismiss any alert inline. Here’s how:
+									.example
+										.alert.alert-primary.alert-dismissable.fade.show(role="alert")
+											strong Woah 
+											| you should check on some of the blah blah
+											button.close(type="button" data-dismiss="alert" aria-label="Close")
+												span(aria-hidden="true") &times;
 
 										
 						
