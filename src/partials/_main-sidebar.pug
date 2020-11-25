@@ -1,6 +1,6 @@
 nav.sidebar.d-none.d-sm-block
 	.sidebar-header.d-none.d-sm-flex
-		a(href="#" class="sidebar-brand")
+		a(href="index.html" class="sidebar-brand")
 			| #{personal.companyName} 
 		.sidebar-toggler.not-active
 			span
@@ -9,7 +9,7 @@ nav.sidebar.d-none.d-sm-block
 	.sidebar-body
 		ul(class="nav flex-column")
 			li(class="nav-item")
-				a(class="nav-link disabled" data-toggle="collapse" href="/" role="button" aria-expanded="false" aria-controls="dashboards")
+				a(class="nav-link" data-toggle="collapse" href="index.html" role="button" aria-expanded="false" aria-controls="dashboard")
 					i(class="mr-4 ml-2" data-feather="layers")
 					span.link-title 
 						| Dashboard
@@ -51,7 +51,9 @@ nav.sidebar.d-none.d-sm-block
 				.collapse(id="uiElements")
 					ul.nav.sub-menu
 						li.nav-item
-							a.nav-link(href="#") Alerts
+							a.nav-link(href="alerts.html") Alerts
+						li.nav-item
+							a.nav-link(href="badges.html") Badges
 			li(class="nav-item")
 				a(class="nav-link disabled" data-toggle="collapse" href="#icons" role="button" aria-expanded="false" aria-controls="icons")
 					i(class="mr-4 ml-2" data-feather="smile")

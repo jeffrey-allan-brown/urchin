@@ -127,7 +127,7 @@ gulp.task('buildCoreView', function buildHTML() {
       pretty: true,
       data: config
     }))
-    .pipe(gulp.dest('./dist'));
+    .pipe(gulp.dest('./dist/pages'));
   });
 
 gulp.task('buildComponentViews', function buildHTML() {
@@ -136,7 +136,7 @@ gulp.task('buildComponentViews', function buildHTML() {
       pretty: true,
       data: config
     }))
-    .pipe(gulp.dest('./dist'));
+    .pipe(gulp.dest('./dist/pages'));
   });
 
 
