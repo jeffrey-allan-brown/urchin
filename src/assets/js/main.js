@@ -26,82 +26,27 @@ $(function() {
     $('#dashboardDatePicker').datepicker('setDate', today);
   }
 });
+// initialize clipboard plugin
+if ($('.btn-clipboard').length) {
+  var clipboard = new ClipboardJS('.btn-clipboard');
 
-(function(){
-  if (typeof self === 'undefined' || !self.Prism || !self.document) {
-    return;
-  }
+  // Enabling tooltip to all clipboard buttons
+  $('.btn-clipboard').attr('data-toggle', 'tooltip').attr('title', 'Copy to clipboard');
 
-  if (!Prism.plugins.toolbar) {
-    console.warn('Copy to Clipboard plugin loaded before Toolbar plugin.');
+  // initializing bootstrap tooltip
+  $('[data-toggle="tooltip"]').tooltip();
 
-    return;
-  }
-
-  var ClipboardJS = window.ClipboardJS || undefined;
-
-  if (!ClipboardJS && typeof require === 'function') {
-    ClipboardJS = require('clipboard');
-  }
-
-  var callbacks = [];
-
-  if (!ClipboardJS) {
-    var script = document.createElement('script');
-    var head = document.querySelector('head');
-
-    script.onload = function() {
-      ClipboardJS = window.ClipboardJS;
-
-      if (ClipboardJS) {
-        while (callbacks.length) {
-          callbacks.pop()();
-        }
-      }
-    };
-
-    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js';
-    head.appendChild(script);
-  }
-
-  Prism.plugins.toolbar.registerButton('copy-to-clipboard', function (env) {
-    var linkCopy = document.createElement('button');
-    linkCopy.textContent = 'Copy';
-    linkCopy.setAttribute('type', 'button');
-
-    var element = env.element;
-
-    if (!ClipboardJS) {
-      callbacks.push(registerClipboard);
-    } else {
-      registerClipboard();
-    }
-
-    return linkCopy;
-
-    function registerClipboard() {
-      var clip = new ClipboardJS(linkCopy, {
-        'text': function () {
-          return element.textContent;
-        }
-      });
-
-      clip.on('success', function() {
-        linkCopy.textContent = 'Copied!';
-
-        resetText();
-      });
-      clip.on('error', function () {
-        linkCopy.textContent = 'Press Ctrl+C to copy';
-
-        resetText();
-      });
-    }
-
-    function resetText() {
-      setTimeout(function () {
-        linkCopy.textContent = 'Copy';
-      }, 5000);
-    }
+  // initially hide btn-clipboard and show after copy
+  clipboard.on('success', function(e) {
+    e.trigger.classList.value = 'btn btn-clipboard btn-current'
+    $('.btn-current').tooltip('hide');
+    e.trigger.dataset.originalTitle = 'Copied';
+    $('.btn-current').tooltip('show');
+    setTimeout(function(){
+        $('.btn-current').tooltip('hide');
+        e.trigger.dataset.originalTitle = 'Copy to clipboard';
+        e.trigger.classList.value = 'btn btn-clipboard'
+    },1000);
+    e.clearSelection();
   });
-})();
+}
