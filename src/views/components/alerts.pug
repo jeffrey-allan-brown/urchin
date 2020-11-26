@@ -45,6 +45,17 @@ html
 										.alert.alert-shade(role="alert") A simple 
 											a.alert-link(href="#") shade alert &nbsp;
 											| with an example link.
+									figure.highlight#defaultAlerts
+										pre
+											code.language-markup
+												script(type="script/prism-html-markup")
+													<div class="alert alert-primary" role="alert">A simple <a class="alert-link" href="#">primary alert</a> with an example link.</div>
+													<div class="alert alert-secondary" role="alert">A simple <a class="alert-link" href="#">secondary alert</a> with an example link.</div>
+													<div class="alert alert-tertiary" role="alert">A simple <a class="alert-link" href="#">tertiary alert</a> with an example link.</div>
+													<div class="alert alert-accent" role="alert">A simple <a class="alert-link" href="#">accent alert</a> with an example link.</div>
+													<div class="alert alert-shade" role="alert">A simple <a class="alert-link" href="#">shade alert</a> with an example link.</div>
+											button.btn.btn-clipboard(type="button" data-clipboard-target="#defaultButton" data-toggle="tooltip" title="" data-original-title="Copy to clipboard")
+												i(data-feather="copy")
 						div.col-md-6.mb-3
 							div.card
 								div.card-header Show Code
@@ -52,7 +63,7 @@ html
 										input(type="checkbox" class="custom-control-input" id="customSwitch2")
 										label(class="custom-control-label" for="customSwitch2")
 								div.card-body
-									h4.card-title Additional Content
+									h4.card-title Additional Content Alerts
 									p.mb-3 Alerts are available for any length of text, as well as an optional dismiss button. For proper styling, use one of the eight required contextual classes (e.g., 
 										code .alert-success
 									.demo-content
@@ -61,6 +72,18 @@ html
 											p Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.
 											hr
 											p.mb-0 Whenever you need to, be sure to use margin utilities to keep things nice and tidy.
+									figure.highlight#defaultAlerts
+										pre
+											code.language-markup
+												script(type="script/prism-html-markup")
+													<div class="alert alert-primary" role="alert">
+														<h4 class="alert-heading">Headline Text</h4>
+														<p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+														<hr>
+														<p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+													</div>
+											button.btn.btn-clipboard(type="button" data-clipboard-target="#defaultButton" data-toggle="tooltip" title="" data-original-title="Copy to clipboard")
+												i(data-feather="copy")
 						div.col-md-6.mb-3
 							div.card
 								div.card-header Show Code
@@ -68,7 +91,7 @@ html
 										input(type="checkbox" class="custom-control-input" id="customSwitch3")
 										label(class="custom-control-label" for="customSwitch3")
 								div.card-body
-									h4.card-title Dismissing
+									h4.card-title Dismissing Alerts
 									
 									p.mb-3 Using the alert JavaScript plugin, it’s possible to dismiss any alert inline. Here’s how:
 									.demo-content
@@ -97,6 +120,27 @@ html
 											| can be dismissed by clicking the close button.
 											button.close(type="button" data-dismiss="alert" aria-label="Close")
 												i(class="" data-feather="x-square")
+									figure.highlight#defaultAlerts
+										pre
+											code.language-markup
+												script(type="script/prism-html-markup")
+													<div class="alert alert-primary alert-dismissable fade show" role="alert"><strong>This alert </strong>can be dismissed by clicking the close button.
+														<button class="close" type="button" data-dismiss="alert" aria-label="Close"><i data-feather="x-square"></i></button>
+													</div>
+													<div class="alert alert-secondary alert-dismissable fade show" role="alert"><strong>This alert </strong>can be dismissed by clicking the close button.
+														<button class="close" type="button" data-dismiss="alert" aria-label="Close"><i data-feather="x-square"></i></button>
+													</div>
+													<div class="alert alert-tertiary alert-dismissable fade show" role="alert"><strong>This alert </strong>can be dismissed by clicking the close button.
+														<button class="close" type="button" data-dismiss="alert" aria-label="Close"><i data-feather="x-square"></i></button>
+													</div>
+													<div class="alert alert-accent alert-dismissable fade show" role="alert"><strong>This alert </strong>can be dismissed by clicking the close button.
+														<button class="close" type="button" data-dismiss="alert" aria-label="Close"><i data-feather="x-square"></i></button>
+													</div>
+													<div class="alert alert-shade alert-dismissable fade show" role="alert"><strong>This alert </strong>can be dismissed by clicking the close button.
+														<button class="close" type="button" data-dismiss="alert" aria-label="Close"><i data-feather="x-square"></i></button>
+													</div>
+											button.btn.btn-clipboard(type="button" data-clipboard-target="#defaultButton" data-toggle="tooltip" title="" data-original-title="Copy to clipboard")
+												i(data-feather="copy")
 												
 
 										
