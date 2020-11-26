@@ -4,11 +4,6 @@
     margin-bottom: 1rem;
     border: none;
     border-radius: .1rem;
-    @include themify($themes) {
-        color: themed('primary') !important;
-        background-color: themed('light') !important;
-        border-color: themed('primary') !important;
-    }
 
     button .close {
         float: right;
@@ -20,4 +15,94 @@
         opacity: .6;
     }
     
+}
+
+.alert-primary {
+    @include themify($themes) {
+        color: themed('primary') !important;
+        background-color: rgba(themed('primary'), .05) !important;
+        border-color: themed('primary') !important;
+    }
+
+    hr {
+        @include themify($themes) {
+            border-top-color: themed('primary') !important;
+        }
+    }
+}
+
+
+.alert-secondary {
+    @include themify($themes) {
+        color: themed('secondary') !important;
+        background-color: rgba(themed('secondary'), .05) !important;
+        border-color: themed('secondary') !important;
+    }
+
+    hr {
+        @include themify($themes) {
+            border-top-color: themed('secondary') !important;
+        }
+    }
+}
+
+.alert-tertiary {
+    @include themify($themes) {
+        color: themed('tertiary') !important;
+        background-color: rgba(themed('tertiary'), .05) !important;
+        border-color: themed('tertiary') !important;
+    }
+
+    hr {
+        @include themify($themes) {
+            border-top-color: themed('tertiary') !important;
+        }
+    }
+
+    .alert-link {
+        @include themify($themes) {
+            color: themed('tertiary') !important;
+        }
+    }
+}
+
+.alert-accent {
+    @include themify($themes) {
+        color: themed('accent') !important;
+        background-color: rgba(themed('accent'), .05) !important;
+        border-color: themed('accent') !important;
+    }
+
+    hr {
+        @include themify($themes) {
+            border-top-color: themed('accent') !important;
+        }
+    }
+
+    .alert-link {
+        @include themify($themes) {
+            color: themed('accent') !important;
+        }
+    }
+}
+
+
+.alert-shade {
+    @include themify($themes) {
+        color: themed('shade') !important;
+        background-color: rgba(themed('shade'), .05) !important;
+        border-color: themed('shade') !important;
+    }
+
+    hr {
+        @include themify($themes) {
+            border-top-color: themed('shade') !important;
+        }
+    }
+
+    .alert-link {
+        @include themify($themes) {
+            color: themed('shade') !important;
+        }
+    }
 }

@@ -27,7 +27,10 @@ script.
       }
     });
 
-    //  open sidebar-folded when hover
+    $( document ).ready(function() {
+      $('.main-wrapper').addClass("sidebar-open");
+    });
+
     $(sidebarBody).hover(
     function () {
       console.log("hover");
