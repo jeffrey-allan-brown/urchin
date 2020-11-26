@@ -1,0 +1,24 @@
+.badge-primary {
+    @include themify($themes) {
+        color: $white !important;
+        background-color: themed('primary') !important;
+        border-color: themed('primary') !important;
+    }
+}
+
+.badge-secondary {
+    @include themify($themes) {
+        color: $white !important;
+        background-color: themed('secondary') !important;
+        border-color: themed('secondary') !important;
+    }
+}
+
+
+.badge-tertiary {
+    @include themify($themes) {
+        color: $white !important;
+        background-color: themed('tertiary') !important;
+        border-color: themed('tertiary') !important;
+    }
+}

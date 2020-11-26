@@ -33,13 +33,11 @@ script.
 
     $(sidebarBody).hover(
     function () {
-      console.log("hover");
       if ($('.main-wrapper').hasClass('sidebar-closed')){
         ($('.main-wrapper')).addClass("open-sidebar-closed");
       }
     },
     function () {
-      console.log("not hover");
       if ($('.main-wrapper').hasClass('sidebar-closed')){
         ($('.main-wrapper')).removeClass("open-sidebar-closed");
       }

@@ -64,7 +64,8 @@ gulp.task('cleanBuild', () => {
 });
 gulp.task('cloneVendorSCSS', () => {
     var style1 = gulp.src('./node_modules/bootstrap/scss/**').pipe(gulp.dest('./src/assets/vendors/bootstrap/scss'));
-    return merge(style1);
+    var style2 = gulp.src('./node_modules/prismjs/themes/**').pipe(gulp.dest('./src/assets/vendors/prismjs/css'));
+    return merge(style1,style2);
 });
 gulp.task('cloneVendorJS', () => {
     var script1 = gulp.src('./node_modules/bootstrap/js/src/*.js').pipe(gulp.dest('./src/assets/vendors/bootstrap/js'));
@@ -72,7 +73,10 @@ gulp.task('cloneVendorJS', () => {
     var script3 = gulp.src('./node_modules/jquery/dist/jquery.min.js').pipe(gulp.dest('./src/assets/vendors/jquery'));
     var script4 = gulp.src('./node_modules/feather-icons/**').pipe(gulp.dest('./src/assets/fonts/feather-icons'));
     var script5 = gulp.src('./node_modules/bootstrap-datepicker/js/*.js').pipe(gulp.dest('./src/assets/vendors/bootstrap/js'));
-    return merge(script1,script2,script3,script4,script5);
+    var script6 = gulp.src('./node_modules/clipboard/dist/*.js').pipe(gulp.dest('./src/assets/vendors/clipboard/js'));
+    var script7 = gulp.src('./node_modules/prismjs/*.js').pipe(gulp.dest('./src/assets/vendors/prismjs/js'));
+    var script8 = gulp.src('./node_modules/prismjs/plugins/copy-to-clipboard/*.js').pipe(gulp.dest('./src/assets/vendors/prismjs/js'));
+    return merge(script1,script2,script3,script4,script5,script6,script7);
 });
 
 gulp.task('initialSetup', series('cleanBuild','cloneVendorSCSS','cloneVendorJS'));
@@ -83,7 +87,7 @@ gulp.task('initialSetup', series('cleanBuild','cloneVendorSCSS','cloneVendorJS')
 // ------------------------------
 
 gulp.task('buildCoreCSS', () => {
-    return gulp.src(['./src/assets/vendors/bootstrap/scss/bootstrap.scss'])
+    return gulp.src(['./src/assets/vendors/bootstrap/scss/bootstrap.scss','./src/assets/vendors/prismjs/css/prism-okaidia.css'])
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(sourcemaps.write('./maps'))
@@ -93,7 +97,14 @@ gulp.task('buildCoreCSS', () => {
     .pipe(gulp.dest('./dist/assets/css'));
 });
 gulp.task('buildCoreJS', () => {
-    return gulp.src(['./src/assets/vendors/jquery/jquery.min.js','./src/assets/vendors/bootstrap/js/bootstrap.bundle.min.js','./src/assets/vendors/bootstrap/js/bootstrap-datepicker.js','./src/assets/js/main.js'])
+    return gulp.src([
+        './src/assets/vendors/jquery/jquery.min.js',
+        './src/assets/vendors/bootstrap/js/bootstrap.bundle.min.js',
+        './src/assets/vendors/bootstrap/js/bootstrap-datepicker.js',
+        './src/assets/js/main.js',
+        './src/assets/vendors/clipboard/js/clipboard.min.js',
+        './src/assets/vendors/prismjs/js/prism.js',
+        './src/assets/vendors/prismjs/js/prism-copy-to-clipboard.min.js'])
     .pipe(concat('core.min.js'))
     .pipe(gulp.dest('./dist/assets/js'));
 });
