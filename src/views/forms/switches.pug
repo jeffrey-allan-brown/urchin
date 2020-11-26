@@ -1,0 +1,76 @@
+doctype html
+
+html
+
+	include ../../partials/_head.pug
+
+	body(class="theme-" + app.appTheme)
+		.main-wrapper
+			include ../../partials/_main-sidebar.pug
+
+			.page-wrapper
+
+				include ../../partials/_header-navbar.pug
+
+				.page-content
+
+					.d-flex.justify-content-between.align-items-center.flex-wrap.my-3
+						div.col-md-12
+							h1.mb-3 Switches
+							p.lead Something Something Something
+						div.col-md-6.mb-3
+							div.card
+								div.card-header Basic Switch
+								div.card-content
+									div.card-body
+										p Use class <code>.switch-label</code> to add a label to a switch.
+										.custom-control.custom-switch.custom-control-inline
+											input(type="checkbox" class="custom-control-input" id="customSwitch1")
+											label(class="custom-control-label" for="customSwitch1")
+										.custom-control.custom-switch.custom-control-inline
+											input(type="checkbox" class="custom-control-input" disabled id="customSwitch2")
+											label(class="custom-control-label" for="customSwitch2")
+
+
+
+
+						div.col-md-6.mb-3
+							div.card
+								div.card-header Colors
+								div.card-content
+									div.card-body
+										p Use class <code>.custom-switch-{$color-name}</code> with <code>.custom-switch</code> to change switch's color.
+										.d-flex.justify-content-start.flex-wrap
+											.custom-control.custom-switch.custom-switch-primary.custom-control-inline
+												input(type="checkbox" class="custom-control-input" id="customSwitch3")
+												label(class="custom-control-label" for="customSwitch3")
+											.custom-control.custom-switch.custom-switch-secondary.custom-control-inline
+												input(type="checkbox" class="custom-control-input" id="customSwitch4")
+												label(class="custom-control-label" for="customSwitch4")
+
+
+						div.col-md-6.mb-3
+							div.card
+								div.card-header Text
+								div.card-content
+									div.card-body
+
+
+
+						div.col-md-6.mb-3
+							div.card
+								div.card-header Icons
+								div.card-content
+									div.card-body
+
+
+						div.col-md-6.mb-3
+							div.card
+								div.card-header Sizes
+								div.card-content
+									div.card-body
+
+                
+                                    
+
+				include ../../partials/_footer.pug

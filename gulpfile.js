@@ -157,9 +157,22 @@ gulp.task('buildThemeViews', function buildHTML() {
     .pipe(gulp.dest('./dist/pages'));
   });
 
+gulp.task('buildFormViews', function buildHTML() {
+    return gulp.src([
+        './src/views/forms/switches.pug'
+        ])
+    .pipe(pug({
+      pretty: true,
+      data: config
+    }))
+    .pipe(gulp.dest('./dist/pages'));
+  });
 
 
-gulp.task('compileViews', series('buildCoreView','buildComponentViews','buildThemeViews'));
+
+gulp.task('compileViews', series('buildCoreView','buildComponentViews','buildThemeViews','buildFormViews'));
+
+
 
 
 // Full Build //
