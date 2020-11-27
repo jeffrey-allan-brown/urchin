@@ -4,7 +4,7 @@
 
 .custom-control-inline {
     display: inline-flex;
-    margin-right: 1rem;
+    margin-right: 3rem;
 }
 
 .custom-control {
@@ -23,16 +23,6 @@
     width: 1rem;
     height: 1.25rem;
     opacity: 0;
-}
-
-.custom-switch .custom-control-label::after {
-    top: calc(.25rem + 2px);
-    left: calc(-2.25rem + 2px);
-    width: calc(1rem - 4px);
-    height: calc(1rem - 4px);
-    background-color: #adb5bd;
-    border-radius: .5rem;
-    transition: transform .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 

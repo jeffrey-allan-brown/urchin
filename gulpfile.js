@@ -144,12 +144,28 @@ gulp.task('buildCoreView', function buildHTML() {
 
 gulp.task('buildComponentViews', function buildHTML() {
     return gulp.src([
+        './src/views/components/accordions.pug',
         './src/views/components/alerts.pug',
         './src/views/components/badges.pug',
         './src/views/components/breadcrumbs.pug',
         './src/views/components/buttons.pug',
         './src/views/components/button-groups.pug',
         './src/views/components/cards.pug',
+        './src/views/components/carousel.pug',
+        './src/views/components/collapse.pug',
+        './src/views/components/dropdowns.pug',
+        './src/views/components/list-groups.pug',
+        './src/views/components/media-objects.pug',
+        './src/views/components/modals.pug',
+        './src/views/components/navbars.pug',
+        './src/views/components/pagination.pug',
+        './src/views/components/popovers.pug',
+        './src/views/components/progress.pug',
+        './src/views/components/scrollbars.pug',
+        './src/views/components/scrollspy.pug',
+        './src/views/components/spinners.pug',
+        './src/views/components/toasters.pug',
+        './src/views/components/tooltips.pug',
         ])
     .pipe(pug({
       pretty: true,

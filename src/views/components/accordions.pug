@@ -1,0 +1,27 @@
+doctype html
+
+html
+
+	include ../../partials/_head.pug
+
+	body(class="theme-" + app.appTheme)
+		.main-wrapper
+			include ../../partials/_main-sidebar.pug
+
+			.page-wrapper
+
+				include ../../partials/_header-navbar.pug
+
+				.page-content
+
+					.d-flex.justify-content-between.align-items-center.flex-wrap.my-3
+						div.col-md-12
+							h1.mb-3 Accordions
+							p.lead Use 
+								code .accordion
+								| class to to wrap the whole accordion content.
+
+						div.col-md-12
+
+
+				include ../../partials/_footer.pug
