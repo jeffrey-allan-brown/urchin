@@ -12,5 +12,28 @@ html
 							h1.mb-3 Button Groups
 							p.lead Group a series of buttons together on a single line with the button group, and super-power them with JavaScript.
 							hr
+							h4#default Basic Example
+							p Wrap a series of buttons with <code>.btn</code> in <code>.btn-group</code>.
+							.example
+								.btn-group(role="group" aria-label="Basic Example")
+									button.btn.btn-primary(type="button") Left
+									button.btn.btn-primary(type="button") Middle
+									button.btn.btn-primary(type="button") Right
+							figure.highlight#button-groups-default
+								pre
+									code.language-markup
+										script(type="script/prism-html-markup")
+											<div class="btn-group" role="group" aria-label="Basic example">
+												<button type="button" class="btn btn-primary">Left</button>
+												<button type="button" class="btn btn-primary">Middle</button>
+												<button type="button" class="btn btn-primary">Right</button>
+											</div>
+
+
+									button.btn.btn-clipboard(type="button" data-clipboard-target="#defaultButton" data-toggle="tooltip" title="" data-original-title="Copy to clipboard")
+										i(data-feather="copy")
+
+
+
 						
 				include ../../partials/_footer.pug

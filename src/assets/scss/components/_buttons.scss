@@ -1,4 +1,4 @@
-.badge-primary {
+.btn-primary {
     @include themify($themes) {
         color: $white !important;
         background-color: themed('primary') !important;
@@ -6,7 +6,7 @@
     }
 }
 
-.badge-secondary {
+.btn-secondary {
     @include themify($themes) {
         color: $white !important;
         background-color: themed('secondary') !important;
@@ -15,7 +15,7 @@
 }
 
 
-.badge-tertiary {
+.btn-tertiary {
     @include themify($themes) {
         color: $white !important;
         background-color: themed('tertiary') !important;
@@ -23,7 +23,7 @@
     }
 }
 
-.badge-accent {
+.btn-accent {
     @include themify($themes) {
         color: $white !important;
         background-color: themed('accent') !important;
@@ -31,7 +31,7 @@
     }
 }
 
-.badge-shade {
+.btn-shade {
     @include themify($themes) {
         color: $white !important;
         background-color: themed('shade') !important;
@@ -39,7 +39,7 @@
     }
 }
 
-.badge-light {
+.btn-light {
     @include themify($themes) {
         color: themed('dark') !important;
         background-color: themed('light') !important;
@@ -47,7 +47,7 @@
     }
 }
 
-.badge-dark {
+.btn-dark {
     @include themify($themes) {
         color: $white !important;
         background-color: themed('dark') !important;

@@ -8,7 +8,7 @@
     "website": "https://website.com"
   },
   "app": {
-    "appTheme": "regal",
+    "appTheme": "default",
     "direction": "ltr",
     "layoutStyle": "horizontalNavigation", 
     "glossary": {

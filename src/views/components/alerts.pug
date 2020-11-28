@@ -1,32 +1,25 @@
 doctype html
-
 html
-
 	include ../../partials/_head.pug
-
 	body(class="theme-" + app.appTheme)
 		.main-wrapper
 			include ../../partials/_main-sidebar.pug
-
 			.page-wrapper
-
 				include ../../partials/_header-navbar.pug
-
 				.page-content
-
-					.d-flex.justify-content-between.flex-wrap.my-3
+					.d-flex.justify-content-between.align-items-center.flex-wrap.my-3
 						div.col-md-12
 							h1.mb-3 Alerts
 							p.lead Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
 							hr
 						div.col-md-12.mb-3
-							div.card
+							div
 								div.card-header Show Code
 									.custom-control.custom-switch.custom-switch-primary.custom-control-inline.float-right
 										input(type="checkbox" class="custom-control-input" id="customSwitch1" checked)
 										label(class="custom-control-label" for="customSwitch1")
-								div.card-body
-									h4.card-title Simple Alerts with Links
+								div.mt-2
+									h4 Simple Alerts with Links
 									p.mb-3 Alerts are available for any length of text, as well as an optional dismiss button. For proper styling, use one of the eight required contextual classes (e.g., 
 										code .alert-success
 									.demo-content
@@ -57,13 +50,13 @@ html
 											button.btn.btn-clipboard(type="button" data-clipboard-target="#defaultButton" data-toggle="tooltip" title="" data-original-title="Copy to clipboard")
 												i(data-feather="copy")
 						div.col-md-12.mb-3
-							div.card
+							div
 								div.card-header Show Code
 									.custom-control.custom-switch.custom-switch-primary.custom-control-inline.float-right
 										input(type="checkbox" class="custom-control-input" id="customSwitch2" checked)
 										label(class="custom-control-label" for="customSwitch2")
-								div.card-body
-									h4.card-title Additional Content Alerts
+								div.mt-2
+									h4 Additional Content Alerts
 									p.mb-3 Alerts are available for any length of text, as well as an optional dismiss button. For proper styling, use one of the eight required contextual classes (e.g., 
 										code .alert-success
 									.demo-content
@@ -85,14 +78,13 @@ html
 											button.btn.btn-clipboard(type="button" data-clipboard-target="#defaultButton" data-toggle="tooltip" title="" data-original-title="Copy to clipboard")
 												i(data-feather="copy")
 						div.col-md-12.mb-3
-							div.card
+							div
 								div.card-header Show Code
 									.custom-control.custom-switch.custom-switch-primary.custom-control-inline.float-right
 										input(type="checkbox" class="custom-control-input" id="customSwitch3" checked)
 										label(class="custom-control-label" for="customSwitch3")
-								div.card-body
-									h4.card-title Dismissing Alerts
-									
+								div.mt-2
+									h4 Dismissing Alerts
 									p.mb-3 Using the alert JavaScript plugin, it’s possible to dismiss any alert inline. Here’s how:
 									.demo-content
 										.alert.alert-primary.alert-dismissable.fade.show(role="alert")

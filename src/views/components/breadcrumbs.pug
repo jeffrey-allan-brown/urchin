@@ -12,5 +12,35 @@ html
 							h1.mb-3 Breadcrumbs
 							p.lead Indicate the current page’s location within a navigational hierarchy that automatically adds separators via CSS.
 							hr
+
+							h4#default Default Breadcrumb
+							.example
+								nav(aria-label="breadcrumb")
+									ol.breadcrumb
+										li.breadcrumb-item
+											a(href="#") Home
+										li.breadcrumb-item
+											a(href="#") Library
+										li.breadcrumb-item.active(aria-current="page")
+											a(href="#") Data
+							figure.highlight#accordion-default
+								pre
+									code.language-markup
+										script(type="script/prism-html-markup")
+											<nav aria-label="breadcrumb">
+												<ol class="breadcrumb">
+													<li class="breadcrumb-item"><a href="#">Home</a></li>
+													<li class="breadcrumb-item"><a href="#">Library</a></li>
+													<li class="breadcrumb-item active" aria-current="page">Data</li>
+												</ol>
+											</nav>
+
+
+									button.btn.btn-clipboard(type="button" data-clipboard-target="#defaultButton" data-toggle="tooltip" title="" data-original-title="Copy to clipboard")
+										i(data-feather="copy")
+
+
+
+
 						
 				include ../../partials/_footer.pug
