@@ -8,23 +8,32 @@
 
 :ocean: Full component and module toolkit for starting HTML-based projects. 
 
+## Table of Contents
+- [Introduction](#introduction)
+- [System Requirements](#system-requirements)
+- [Quick Start](#inbox_tray-quick-start)
+- [Build Tools](#build-tools)
+- [Configuration](#configuration)
+- [Sources & Credits](#credits)
+- [License](#license)
+- [Support](#support)
+
+
+
+
 ## Introduction
 Urchin was developed to give beginner developers a way to quickly create a front-end interface without having to comb through hundreds of lines of source code and insert their own information. Using Urchin, all a user needs to do is update the configuration file with their preferred settings and run the setup command. Urchin takes care of the rest, and builds a fully-populated set of files that are ready-to-use and easy to understand. 
 
-## Table of Contents
-- [System Requirements](#system-requirements)
-- [Quick Start](#inbox_tray-quick-start)
-- [Configuration](#configuration)
-- [Usage](#usage)
-- [Features](#features)
-- [Updates](#updates)
-- [Contributing](#contributing)
-- [Credits](#credits)
+
+
 
 ## System Requirements
+
+At its core, Urchin relies on Node.js and NPM for its core functionality. 
+
 - Node.js ~14.15.0
 - NPM ~6.14.8
-    
+
 Urchin uses a core set of packages for its functionality:
 
 *Focus*                             |  *Tool(s)*
@@ -48,21 +57,15 @@ npm run setup
 
 This will install all required modules, run Gulp task automation, and compile application components. It also compiles all Pug templates into their HTML equivalents, with all variables prep-populated with the data entered in `config.json`. 
 
-```bash
-├──.github
-├── dist
-├── src /
-|   ├── assets /
-|   |   ├── data
-|   |   ├── fonts
-|   |   ├── images
-|   |   ├── js
-|   |   ├── scss
-|   |   ├── vendors
-.gitignore
- config.json
- gulpfile.js
- LICENSE
- package.json
- README.md
-```
+
+## Build Tools
+
+Gulp
+
+## Configuration
+
+
+## Sources & Credits
+
+
+## Support
