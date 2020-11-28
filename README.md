@@ -9,7 +9,7 @@
 :ocean: Full component and module toolkit for starting HTML-based projects. 
 
 ## Introduction
-Urchin was developed to give beginner developers a way to quickly create a front-end interface without having to comb through hundreds of lines of source code and insert their own information. All a user needs to do is update the configuration file with their preferred settings and run the setup command. Urchin takes care of the rest, and builds a fully-populated set of files that are ready-to-use. 
+Urchin was developed to give beginner developers a way to quickly create a front-end interface without having to comb through hundreds of lines of source code and insert their own information. Using Urchin, all a user needs to do is update the configuration file with their preferred settings and run the setup command. Urchin takes care of the rest, and builds a fully-populated set of files that are ready-to-use and easy to understand. 
 
 ## Table of Contents
 - [System Requirements](#system-requirements)
@@ -34,34 +34,31 @@ Primary Functions                   | Javascript
 Build and Deployment Automation     | Gulp
 View Engine                         | Pug
 Front-End                           | Bootstrap
-Styling                             | SASS
+Styling                             | SCSS
 
 ## :inbox_tray: Quick Start
 
-To get started, first go to the `config.json` file and edit the configuration objects, adding your personal information and application build preferences.
+To get started, first go to the `config.json` file and edit the configuration objects, adding your personal information and application build preferences. A full list of configuration options and their expected values will be provided later. 
+
 Then, run the setup script from the root directory to build the application and load all required assets.
 
 ```
 npm run setup
 ```
 
-This will install all required modules, run Gulp task automation, and compile application components. It also compiles all Pug templates into their HTML equivalents, with all variables prep-populated with the data entered in `settings`. 
+This will install all required modules, run Gulp task automation, and compile application components. It also compiles all Pug templates into their HTML equivalents, with all variables prep-populated with the data entered in `config.json`. 
 
 ```bash
 ├──.github
 ├── dist
-├── docs
-|   ├── documentation.html
 ├── src /
 |   ├── assets /
 |   |   ├── data
 |   |   ├── fonts
-|   |   ├── html
 |   |   ├── images
 |   |   ├── js
 |   |   ├── scss
 |   |   ├── vendors
-|   ├── index.html
 .gitignore
  config.json
  gulpfile.js
