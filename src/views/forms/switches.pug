@@ -15,60 +15,70 @@ html
 				.page-content
 
 					.d-flex.justify-content-between.align-items-center.flex-wrap.my-3
-						div.col-md-12
+						.col-md-12
 							h1.mb-3 Switches
 							p.lead Something Something Something
-						div.col-md-6.mb-3
-							div.card
-								div.card-header Basic Switch
-								div.card-content
-									div.card-body
+						.col-md-12
+							.show-code-header Basic Switch
+								.custom-control.custom-switch.custom-switch-primary.custom-control-inline.float-right
+									input(type="checkbox" class="custom-control-input" id="basicSwitchHeader" checked)
+									label(class="custom-control-label" for="basicSwitchHeader")
+							.card
+								.card-content
+									.card-body
 										p Use class <code>.switch-label</code> to add a label to a switch.
 										.custom-control.custom-switch.custom-control-inline
-											input(type="checkbox" class="custom-control-input" id="customSwitch1")
-											label(class="custom-control-label" for="customSwitch1")
+											input(type="checkbox" class="custom-control-input" id="basicSwitch1")
+											label(class="custom-control-label" for="basicSwitch1")
 										.custom-control.custom-switch.custom-control-inline
-											input(type="checkbox" class="custom-control-input" disabled id="customSwitch2")
-											label(class="custom-control-label" for="customSwitch2")
+											input(type="checkbox" class="custom-control-input" disabled id="basicSwitch2")
+											label(class="custom-control-label" for="basicSwitch2")
 
 
 
 
-						div.col-md-6.mb-3
-							div.card
-								div.card-header Colors
-								div.card-content
-									div.card-body
+						.col-md-12.mb-3
+							.card
+								.card-header Colors
+								.card-content
+									.card-body
 										p Use class <code>.custom-switch-{$color-name}</code> with <code>.custom-switch</code> to change switch's color.
 										.d-flex.justify-content-start.flex-wrap
 											.custom-control.custom-switch.custom-switch-primary.custom-control-inline
-												input(type="checkbox" class="custom-control-input" id="customSwitch3")
-												label(class="custom-control-label" for="customSwitch3")
+												input(type="checkbox" class="custom-control-input" id="colorSwitch1")
+												label(class="custom-control-label" for="colorSwitch1")
 											.custom-control.custom-switch.custom-switch-secondary.custom-control-inline
-												input(type="checkbox" class="custom-control-input" id="customSwitch4")
-												label(class="custom-control-label" for="customSwitch4")
+												input(type="checkbox" class="custom-control-input" id="colorSwitch2")
+												label(class="custom-control-label" for="colorSwitch2")
 
 
-						div.col-md-6.mb-3
-							div.card
-								div.card-header Text
-								div.card-content
-									div.card-body
+						.col-md-12.mb-3
+							.card
+								.card-header Text
+								.card-content
+									.card-body
+										p Use class <code>.switch-text-left & .switch-text-right</code> inside of <code>.custom-control-label</code> to create a switch with text.
+										.d-flex.justify-content-start.flex-wrap
+											.custom-control.custom-switch.custom-switch-primary.custom-control-inline
+												input(type="checkbox" class="custom-control-input" id="textSwitch1")
+												label(class="custom-control-label" for="textSwitch1")
+													span.switch-text-left On
+													span.switch-text-right Off
 
 
 
-						div.col-md-6.mb-3
-							div.card
-								div.card-header Icons
-								div.card-content
-									div.card-body
+						.col-md-12.mb-3
+							.card
+								.card-header Icons
+								.card-content
+									.card-body
 
 
-						div.col-md-6.mb-3
-							div.card
-								div.card-header Sizes
-								div.card-content
-									div.card-body
+						.col-md-12.mb-3
+							.card
+								.card-header Sizes
+								.card-content
+									.card-body
 
                 
                                     

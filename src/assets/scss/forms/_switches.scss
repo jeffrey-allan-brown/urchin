@@ -17,24 +17,54 @@
 }
 
 .custom-control-input {
+
     position: absolute;
     left: 0;
     z-index: -1;
     width: 1rem;
     height: 1.25rem;
     opacity: 0;
+
+    .custom-control-label {
+
+        ::before {
+
+
+
+        }
+
+        ::after {
+
+            top: calc(.25rem + 2px);
+            left: calc(-2.25rem + 2px);
+            width: calc(1.5rem - 4px);
+            height: calc(1.5rem - 4px);
+            background-color: #adb5bd;
+            border-radius: .5rem;
+            transition: transform .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+        }
+
+    }
+
 }
 
 
 .custom-switch-primary {
-	.custom-control-input:checked~.custom-control-label::before {
-		@include themify($themes) {
-            background-color: themed('primary') !important;
-            border-color: themed('primary') !important;
-            color: #ffffff;
-            transition: all .2s ease-out;
+
+	.custom-control-input {
+
+        :checked~.custom-control-label::before {
+            @include themify($themes) {
+                background-color: themed('primary') !important;
+                border-color: themed('primary') !important;
+                color: #ffffff;
+                transition: all .2s ease-out;
+            }
         }
-	}
+
+    }
+
 }
 
 
