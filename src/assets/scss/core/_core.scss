@@ -2,29 +2,14 @@ html, body {
   font-family: 'Poppins', sans-serif;
 }
 
-.page-content .highlight pre {
-  font-size: .85rem;
+
+.show-code-header {
+  padding: .75rem 1.25rem;
+  margin-bottom: 1.5rem;
+  background-color: rgba(0,0,0,.05);
+  border: 1px solid rgba(0,0,0,.08);
 }
-code[class*="language-"] {
-    max-height: inherit;
-    height: inherit;
-    padding: 1em;
-    display: block;
-    overflow: auto;
-}
-.page-content .highlight {
-    position: relative;
-    background-color: #fff;
-    padding: 0px;
-}
-.page-content .highlight .btn-clipboard {
-    position: absolute;
-    top: 6px;
-    right: 6px;
-    font-size: 14px;
-    padding: 4px 8px;
-    background: #e7ebef;
-}
+
 
 .datepicker {
   div {

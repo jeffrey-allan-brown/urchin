@@ -1,0 +1,39 @@
+.accordion {
+	a {
+		@include themify($themes) {
+        	color: themed('primary') !important;
+    	}
+    	font-size: 1.1rem !important;
+	}
+
+	.card {
+		border-radius: 0 !important;
+		margin-bottom: -1px !important;
+
+		.card-header {
+
+			background-color: #fafafa;
+
+
+			.card-title {
+				margin-bottom: 0px !important;
+			}
+
+		}
+	}
+
+
+	.borderless {
+
+		.card {
+
+		    margin-bottom: 0px;
+		    border-top: 0px;
+		    border-left: 0px;
+		    border-right: 0px;
+		    border-bottom: 1px solid #edf2f9;
+
+		}
+
+	}
+}

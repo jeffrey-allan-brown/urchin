@@ -1,0 +1,29 @@
+.page-content .highlight pre {
+  font-size: .85rem;
+  border: 1px solid rgba(0,0,0,.05) !important;
+}
+
+code[class*="language-"] {
+    max-height: inherit;
+    height: inherit;
+    padding: 1em;
+    display: block;
+    overflow: auto;
+}
+
+
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+	background: #fafafa !important;
+}
+
+.page-content .highlight {
+    position: relative;
+    background-color: #fff;
+    padding: 0px;
+}
+
+.language-markup .btn-clipboard {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
