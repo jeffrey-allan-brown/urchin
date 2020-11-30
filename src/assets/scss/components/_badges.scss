@@ -14,31 +14,6 @@
     }
 }
 
-
-.badge-tertiary {
-    @include themify($themes) {
-        color: $white !important;
-        background-color: themed('tertiary') !important;
-        border-color: themed('tertiary') !important;
-    }
-}
-
-.badge-accent {
-    @include themify($themes) {
-        color: $white !important;
-        background-color: themed('accent') !important;
-        border-color: themed('accent') !important;
-    }
-}
-
-.badge-shade {
-    @include themify($themes) {
-        color: $white !important;
-        background-color: themed('shade') !important;
-        border-color: themed('shade') !important;
-    }
-}
-
 .badge-light {
     @include themify($themes) {
         color: themed('dark') !important;

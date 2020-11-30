@@ -100,7 +100,7 @@ $theme-gradient-colors: (
   dark:            linear-gradient(to right, #7d7979 0%, #000000 100%)
 );
 
-$content-bg: #f9fafb;
+$content-bg: #f5f5f5;
 $border-color: #e8ebf1;
 
 $social-colors: (
@@ -123,24 +123,18 @@ $social-colors: (
 
 $themes: (
     default: (
-      primary: #242582,
-      secondary: #553D67,
-      tertiary: #F64C72,
-      accent: #99738E,
-      shade: #2F2FA2,
-      success:#87B38D,
-      warning:#F9C22E,
-      danger:#B94F3C,
-      info:#2E86AB,
-      light: #F5F5F5,
-      dark: #050510,
+      primary: #1C3FAA,
+      secondary: #ffffff,
+      success:#91C714,
+      warning:#FBC500,
+      danger:#D32929,
+      info:#4ab3f4,
+      light: #ffffff,
+      dark: #2d3748,
     ),
     malaise: (
       primary: #05386B,
       secondary: #379683,
-      tertiary: #5CDB95,
-      accent: #EDF5E1,
-      shade: #8EE4AF,
       success:#379683,
       warning:#FFBF46,
       danger:#FF7477,
@@ -151,9 +145,6 @@ $themes: (
     regal: (
       primary: #AC3B61,
       secondary: #123C69,
-      tertiary: #BAB2B5,
-      accent: #EEE2DC,
-      shade: #EDC7B7,
       success:#09BC8A,
       warning:#FFE66D,
       danger:#EB5E28,
@@ -164,9 +155,6 @@ $themes: (
     locksmith:(
       primary: #5D001E,
       secondary: #E3E2DF,
-      tertiary: #E3AFBC,
-      accent: #EE4C7C,
-      shade: #9A1750,
       success:#3A7D44,
       warning:#EA7317,
       danger:#B8003A,
@@ -177,9 +165,6 @@ $themes: (
     triage:(
       primary: #0B0C10,
       secondary: #1F2833,
-      tertiary: #C5C6C7,
-      accent: #66FCF1,
-      shade: #45A29E,
       success:#1A936F,
       warning:#F7F052,
       danger:#C62E65,
@@ -190,9 +175,6 @@ $themes: (
     pacific:(
       primary: #0B0C10,
       secondary: #1F2833,
-      tertiary: #C5C6C7,
-      accent: #66FCF1,
-      shade: #45A29E,
       success:#1A936F,
       warning:#F7F052,
       danger:#C62E65,
@@ -203,9 +185,6 @@ $themes: (
     ranchhand:(
       primary: #0B0C10,
       secondary: #1F2833,
-      tertiary: #C5C6C7,
-      accent: #66FCF1,
-      shade: #45A29E,
       success:#1A936F,
       warning:#F7F052,
       danger:#C62E65,

@@ -1,10 +1,9 @@
 .sidebar {
   width: $sidebar-base-width;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   height: 100vh;
   transition: width .1s ease, left .1s ease;
   position: fixed;
-  overflow-x: auto;
   left: 0;
   top:0;
   z-index: 10;

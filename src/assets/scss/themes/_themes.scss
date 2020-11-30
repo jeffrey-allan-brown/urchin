@@ -24,37 +24,3 @@
 	}
 
 }
-
-.palette-tertiary {
-
-	@include themify($themes) {
-	
-		background-color: themed('tertiary') !important;
-		color: #ffffff !important;
-	
-	}
-
-}
-
-
-.palette-accent {
-
-	@include themify($themes) {
-	
-		background-color: themed('accent') !important;
-		color: #ffffff !important;
-	
-	}
-
-}
-
-.palette-shade {
-
-	@include themify($themes) {
-	
-		background-color: themed('shade') !important;
-		color: #ffffff !important;
-	
-	}
-
-}
