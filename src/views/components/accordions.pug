@@ -16,10 +16,13 @@ html
 
 						div.col-md-12
 							.m-t-25
-								div.show-code-header Show Code
+								div.show-code-header Default Accordion
 									.custom-control.custom-switch.custom-switch-primary.custom-control-inline.float-right
-										input(type="checkbox" class="custom-control-input" id="customSwitch1" checked)
-										label(class="custom-control-label" for="customSwitch1")
+										.show-code-switch Example Code
+										input(type="checkbox" class="custom-control-input" id="accordionDefault1")
+										label(class="custom-control-label" for="accordionDefault1")
+											span.switch-text-left On
+											span.switch-text-right Off
 								.accordion#accordion-default
 									.card
 										.p-3
