@@ -19,7 +19,7 @@ html
 								div.show-code-header Default Accordion
 									.custom-control.custom-switch.custom-switch-primary.custom-control-inline.float-right
 										.show-code-switch Example Code
-										input(type="checkbox" class="custom-control-input" id="accordionDefault1")
+										input(type="checkbox" class="custom-control-input" id="accordionDefault1" checked)
 										label(class="custom-control-label" for="accordionDefault1")
 											span.switch-text-left On
 											span.switch-text-right Off
@@ -103,3 +103,15 @@ html
 
 				
 				include ../../partials/_footer.pug
+				script.
+					$(document).ready(function(){
+						$('#accordionDefault1').val(this.checked);
+					    $('#accordionDefault1').change(function() {
+					        if(this.checked) {
+					        	($('.highlight#accordion-default')).removeClass("d-none");
+					        }
+					    	else {
+					        	($('.highlight#accordion-default')).addClass("d-none");
+					    	}
+					    });
+					});
