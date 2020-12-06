@@ -100,7 +100,7 @@ $theme-gradient-colors: (
   dark:            linear-gradient(to right, #7d7979 0%, #000000 100%)
 );
 
-$content-bg: #f5f5f5;
+$content-bg: #F6F9FC;
 $border-color: #e8ebf1;
 
 $social-colors: (
@@ -123,8 +123,10 @@ $social-colors: (
 
 $themes: (
     default: (
-      primary: #304FFF,
-      secondary: #ffffff,
+      primary: #4bc69a,
+      secondary: #feeb6b,
+      altOne: #b95e4e,
+      altTwo: #19222a,
       success:#91C714,
       warning:#FBC500,
       danger:#D32929,

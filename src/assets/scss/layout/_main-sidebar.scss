@@ -1,6 +1,6 @@
 .sidebar {
   width: $sidebar-base-width;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'SourceSansPro', sans-serif;
   height: 100vh;
   transition: width .1s ease, left .1s ease;
   position: fixed;
@@ -20,7 +20,6 @@
     height: $topnav-base-height;
     display: flex;
     display: webkit-flex;
-    border-bottom: 1px solid $sidebar-light-border-color;
     padding: 0 25px;
     justify-content:space-between;
     -webkit-align-items: center;
@@ -337,8 +336,8 @@
     position: relative;
     border-right: 1px solid $sidebar-light-border-color;
     height: 100%;
-    -webkit-box-shadow: 0 8px 10px 0 rgba(183,192,206,.2);
-            box-shadow: 0 8px 10px 0 rgba(183,192,206,.2); 
+    -webkit-box-shadow: none;
+            box-shadow: none; 
     
     .nav {
       padding: 25px 10px 50px 15px;
@@ -367,8 +366,8 @@
           }
 
           .link-title {
-            font-size: 14px;
-            font-weight: 700;
+            font-size: 16px;
+            font-weight: 600;
           }
 
           .link-arrow {
@@ -486,7 +485,7 @@
             @include themify($themes) {
               color: themed('dark');
             }
-            font-size: 14px;
+            font-size: 16px;
             font-weight: 500;
             -webkit-transition: all .3s ease-in-out;
             transition: all .3s ease-in-out;

@@ -1,14 +1,26 @@
+body {
+  color: #19222A !important;
+}
+
+h1 {
+  font-weight: 600 !important;
+}
+
+.lead {
+  font-weight: 500 !important;
+}
+
 .show-code-header {
   padding: .75rem 1.25rem;
-  background-color: rgba(0,0,0,.05);
-  border: 1px solid rgba(0,0,0,.08);
+  background-color: #5d7b8c;
+  color: #ffffff;
+  border: none;
   font-weight: 700;
 }
 
 .show-code-switch {
   margin-right: 3rem !important;
 }
-
 
 .datepicker {
   div {
