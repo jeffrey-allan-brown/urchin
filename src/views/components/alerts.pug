@@ -17,8 +17,8 @@ html
 								div.show-code-header Simple Alerts with Links
 									.custom-control.custom-switch.custom-switch-primary.custom-control-inline.float-right
 										.show-code-switch Example Code
-										input(type="checkbox" class="custom-control-input" id="accordionDefault1" checked)
-										label(class="custom-control-label" for="accordionDefault1")
+										input(type="checkbox" class="custom-control-input" id="alertDefault1" checked)
+										label(class="custom-control-label" for="alertDefault1")
 											span.switch-text-left On
 											span.switch-text-right Off
 								div.mt-2
@@ -31,13 +31,22 @@ html
 										.alert.alert-secondary(role="alert") A simple 
 											a.alert-link(href="#") secondary alert &nbsp;
 											| with an example link.
-										.alert.alert-tertiary(role="alert") A simple 
-											a.alert-link(href="#") tertiary alert &nbsp;
+										.alert.alert-success(role="alert") A simple 
+											a.alert-link(href="#") success alert &nbsp;
 											| with an example link.
-										.alert.alert-accent(role="alert") A simple 
+										.alert.alert-warning(role="alert") A simple 
 											a.alert-link(href="#") accent alert &nbsp;
 											| with an example link.
-										.alert.alert-shade(role="alert") A simple 
+										.alert.alert-danger(role="alert") A simple 
+											a.alert-link(href="#") shade alert &nbsp;
+											| with an example link.
+										.alert.alert-info(role="alert") A simple 
+											a.alert-link(href="#") shade alert &nbsp;
+											| with an example link.
+										.alert.alert-dark(role="alert") A simple 
+											a.alert-link(href="#") shade alert &nbsp;
+											| with an example link.
+										.alert.alert-light(role="alert") A simple 
 											a.alert-link(href="#") shade alert &nbsp;
 											| with an example link.
 									figure.highlight#defaultAlerts
@@ -46,9 +55,11 @@ html
 												script(type="script/prism-html-markup")
 													<div class="alert alert-primary" role="alert">A simple <a class="alert-link" href="#">primary alert</a> with an example link.</div>
 													<div class="alert alert-secondary" role="alert">A simple <a class="alert-link" href="#">secondary alert</a> with an example link.</div>
-													<div class="alert alert-tertiary" role="alert">A simple <a class="alert-link" href="#">tertiary alert</a> with an example link.</div>
-													<div class="alert alert-accent" role="alert">A simple <a class="alert-link" href="#">accent alert</a> with an example link.</div>
-													<div class="alert alert-shade" role="alert">A simple <a class="alert-link" href="#">shade alert</a> with an example link.</div>
+													<div class="alert alert-success" role="alert">A simple <a class="alert-link" href="#">success alert</a> with an example link.</div>
+													<div class="alert alert-warning" role="alert">A simple <a class="alert-link" href="#">warning alert</a> with an example link.</div>
+													<div class="alert alert-danger" role="alert">A simple <a class="alert-link" href="#">danger alert</a> with an example link.</div>
+													<div class="alert alert-dark" role="alert">A simple <a class="alert-link" href="#">dark alert</a> with an example link.</div>
+													<div class="alert alert-light" role="alert">A simple <a class="alert-link" href="#">light alert</a> with an example link.</div>
 											button.btn.btn-clipboard(type="button" data-clipboard-target="#defaultButton" data-toggle="tooltip" title="" data-original-title="Copy to clipboard")
 												i(data-feather="copy")
 						div.col-md-12.mb-3
@@ -56,8 +67,8 @@ html
 								div.show-code-header Additional Content Alerts
 									.custom-control.custom-switch.custom-switch-primary.custom-control-inline.float-right
 										.show-code-switch Example Code
-										input(type="checkbox" class="custom-control-input" id="accordionDefault1" checked)
-										label(class="custom-control-label" for="accordionDefault1")
+										input(type="checkbox" class="custom-control-input" id="alertBody1" checked)
+										label(class="custom-control-label" for="alertBody1")
 											span.switch-text-left On
 											span.switch-text-right Off
 								div.mt-2
@@ -86,8 +97,8 @@ html
 								div.show-code-header Dismissing Alerts
 									.custom-control.custom-switch.custom-switch-primary.custom-control-inline.float-right
 										.show-code-switch Example Code
-										input(type="checkbox" class="custom-control-input" id="accordionDefault1" checked)
-										label(class="custom-control-label" for="accordionDefault1")
+										input(type="checkbox" class="custom-control-input" id="alertDismissable1" checked)
+										label(class="custom-control-label" for="alertDismissable1")
 											span.switch-text-left On
 											span.switch-text-right Off
 								div.mt-2
@@ -103,17 +114,27 @@ html
 											| can be dismissed by clicking the close button.
 											button.close(type="button" data-dismiss="alert" aria-label="Close")
 												i(class="" data-feather="x-square")
-										.alert.alert-tertiary.alert-dismissable.fade.show(role="alert")
+										.alert.alert-success.alert-dismissable.fade.show(role="alert")
 											strong This alert 
 											| can be dismissed by clicking the close button.
 											button.close(type="button" data-dismiss="alert" aria-label="Close")
 												i(class="" data-feather="x-square")
-										.alert.alert-accent.alert-dismissable.fade.show(role="alert")
+										.alert.alert-warning.alert-dismissable.fade.show(role="alert")
 											strong This alert 
 											| can be dismissed by clicking the close button.
 											button.close(type="button" data-dismiss="alert" aria-label="Close")
 												i(class="" data-feather="x-square")
-										.alert.alert-shade.alert-dismissable.fade.show(role="alert")
+										.alert.alert-danger.alert-dismissable.fade.show(role="alert")
+											strong This alert 
+											| can be dismissed by clicking the close button.
+											button.close(type="button" data-dismiss="alert" aria-label="Close")
+												i(class="" data-feather="x-square")
+										.alert.alert-dark.alert-dismissable.fade.show(role="alert")
+											strong This alert 
+											| can be dismissed by clicking the close button.
+											button.close(type="button" data-dismiss="alert" aria-label="Close")
+												i(class="" data-feather="x-square")
+										.alert.alert-light.alert-dismissable.fade.show(role="alert")
 											strong This alert 
 											| can be dismissed by clicking the close button.
 											button.close(type="button" data-dismiss="alert" aria-label="Close")
