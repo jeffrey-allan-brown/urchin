@@ -9,7 +9,11 @@
             height: 2rem !important;
             top: -.2rem !important;
             pointer-events: all;
-            border-radius: 3rem !important; 
+            border-radius: 3rem !important;
+            @include themify($themes) {
+                background-color: themed('primary') !important;
+                border-color: themed('primary') !important;
+            }
         }
 
         &::after {
@@ -17,7 +21,7 @@
             left: calc(-2.25rem + 2px);
             width: calc(2rem - 4px) !important;
             height: calc(2rem - 4px) !important;
-            background-color: #adb5bd;
+            background-color: #ffffff !important;
             border-radius: 3rem !important;
             transition: transform .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
         }
